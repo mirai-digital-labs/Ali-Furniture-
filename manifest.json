@@ -1,0 +1,42 @@
+{
+  "name": "Ali Furniture — Premium Handcrafted Furniture",
+  "short_name": "Ali Furniture",
+  "description": "Premium handcrafted furniture from Lahore. Solid Sheesham wood, made to order, delivered all over Pakistan.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#ffffff",
+  "theme_color": "#1a1614",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["shopping", "business", "lifestyle"],
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20192%20192'%3E%3Crect%20width='192'%20height='192'%20rx='36'%20fill='%231a1614'/%3E%3Ctext%20x='96'%20y='124'%20font-family='serif'%20font-size='84'%20fill='%23b08d57'%20text-anchor='middle'%3EAF%3C/text%3E%3C/svg%3E",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20512%20512'%3E%3Crect%20width='512'%20height='512'%20rx='96'%20fill='%231a1614'/%3E%3Ctext%20x='256'%20y='330'%20font-family='serif'%20font-size='224'%20fill='%23b08d57'%20text-anchor='middle'%3EAF%3C/text%3E%3C/svg%3E",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Shop Furniture",
+      "short_name": "Shop",
+      "url": "./index.html#shop",
+      "description": "Browse all furniture"
+    },
+    {
+      "name": "Contact Us",
+      "short_name": "Contact",
+      "url": "./index.html#contact",
+      "description": "Get in touch on WhatsApp"
+    }
+  ]
+}
