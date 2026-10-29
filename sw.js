@@ -1,9 +1,9 @@
 /* =========================================================
-   ALI FURNITURE — Service Worker
+   ALI FURNITURE & DECOR POINT — Service Worker
    Cache-first for static assets, network-first for CDN
    ========================================================= */
 
-const VERSION = "v1.0.0";
+const VERSION = "v2.0.1";
 const CACHE_NAME = "ali-furniture-" + VERSION;
 
 // Core app shell — cached on install

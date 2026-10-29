@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Ali Furniture — Premium Handcrafted Furniture in Pakistan</title>
-<meta name="description" content="Ali Furniture — Premium handcrafted sofas, beds, dining tables, wardrobes & office furniture. Solid Sheesham wood, custom made to order, delivery all over Pakistan. Order on WhatsApp.">
-<meta name="keywords" content="furniture, sofa set, bed, dining table, wardrobe, office chair, furniture showroom Lahore, custom furniture Pakistan, Ali Furniture">
-<meta name="author" content="Ali Furniture">
+<title>Ali Furniture &amp; Decor Point — Handcrafted Furniture | Malik Irfan</title>
+<meta name="description" content="Ali Furniture &amp; Decor Point by Malik Irfan — Premium handcrafted sofas, beds, dining tables, wardrobes &amp; office furniture in Jhang Saddar. Farooq Azam Road near Niazi Chowk. Delivery all over Pakistan. Order on WhatsApp: 0313-7015255, 0348-1298093.">
+<meta name="keywords" content="Ali Furniture, Decor Point, Malik Irfan, furniture Jhang, sofa set, bed, dining table, wardrobe, office chair, Farooq Azam road, Niazi Chowk Jhang Saddar">
+<meta name="author" content="Ali Furniture &amp; Decor Point — Malik Irfan">
 <meta name="theme-color" content="#1a1614">
 <link rel="canonical" href="https://alifurniture.pages.dev/">
 
 <!-- Open Graph / WhatsApp Share Preview -->
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Ali Furniture">
-<meta property="og:title" content="Ali Furniture — Premium Handcrafted Furniture">
-<meta property="og:description" content="Handcrafted sofas, beds, dining tables & wardrobes from solid Sheesham wood. Delivery all over Pakistan. Order on WhatsApp.">
+<meta property="og:site_name" content="Ali Furniture &amp; Decor Point">
+<meta property="og:title" content="Ali Furniture &amp; Decor Point — Premium Handcrafted Furniture">
+<meta property="og:description" content="Handcrafted sofas, beds, dining tables &amp; wardrobes by Malik Irfan. Farooq Azam Road, near Niazi Chowk, Jhang Saddar. Easy Exchange Policy. Delivery all over Pakistan.">
 <meta property="og:image" content="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=70">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -85,6 +85,7 @@ html.dark .glass{background:rgba(20,17,14,.78)}
 .marquee:hover .marquee-track{animation-play-state:paused}
 @keyframes marq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 .marquee-slow .marquee-track{animation-duration:55s}
+.marquee-top .marquee-track{animation-duration:140s}
 .badge-pill{font-size:10px;font-weight:700;letter-spacing:.06em;padding:3px 8px;border-radius:999px;text-transform:uppercase;display:inline-block}
 .skeleton{background:linear-gradient(90deg,var(--alt) 25%,var(--border) 50%,var(--alt) 75%);background-size:200% 100%;animation:sk 1.2s infinite}
 @keyframes sk{from{background-position:200% 0}to{background-position:-200% 0}}
@@ -113,6 +114,38 @@ details.faq[open] .faq-icon{transform:rotate(45deg)}
 .tab-btn.active{background:var(--gold);color:#fff;border-color:var(--gold)}
 .star{color:#e0a93b}
 .fade-page{animation:fadeIn .5s ease}
+
+/* Modern Sticky Navbar Scroll Style */
+#navbar{transition:all .35s cubic-bezier(.16,1,.3,1)}
+#navbar.scrolled{
+  background:rgba(255,255,255,.94)!important;
+  backdrop-filter:blur(20px) saturate(180%);
+  -webkit-backdrop-filter:blur(20px) saturate(180%);
+  border-bottom:1px solid rgba(176,141,87,.32)!important;
+  box-shadow:0 12px 30px -10px rgba(176,141,87,.22);
+}
+html.dark #navbar.scrolled{
+  background:rgba(20,17,14,.92)!important;
+  border-bottom:1px solid rgba(176,141,87,.35)!important;
+  box-shadow:0 14px 34px -10px rgba(0,0,0,.7);
+}
+
+/* Reverse Marquee for dual lines */
+.marquee-rev .marquee-track{animation:marqRev 34s linear infinite}
+@keyframes marqRev{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+
+/* Trust Card Hover Effects */
+.trust-card{
+  transition:all .35s cubic-bezier(.16,1,.3,1);
+  border:1px solid var(--border);
+  background:var(--card);
+  border-radius:1.15rem;
+}
+.trust-card:hover{
+  transform:translateY(-8px);
+  border-color:var(--gold);
+  box-shadow:0 18px 36px -12px rgba(176,141,87,.32);
+}
 </style>
 
 <!-- Google Analytics — set your ID below to activate (leave empty to disable) -->
@@ -133,13 +166,14 @@ details.faq[open] .faq-icon{transform:rotate(45deg)}
 {
   "@context":"https://schema.org",
   "@type":"FurnitureStore",
-  "name":"Ali Furniture",
+  "name":"Ali Furniture & Decor Point",
+  "founder":"Malik Irfan",
   "image":"https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=70",
-  "description":"Premium handcrafted furniture showroom and manufacturer. Sofas, beds, dining tables, wardrobes and office furniture.",
-  "address":{"@type":"PostalAddress","streetAddress":"Main Boulevard, Gulberg III","addressLocality":"Lahore","addressCountry":"PK"},
-  "telephone":"+92-300-1234567",
+  "description":"Premium handcrafted furniture and decor showroom by Malik Irfan. Sofas, beds, dining tables, wardrobes and office furniture. Farooq Azam Road, near Niazi Chowk, Jhang Saddar.",
+  "address":{"@type":"PostalAddress","streetAddress":"Farooq Azam Road, near Niazi Chowk","addressLocality":"Jhang Saddar","addressRegion":"Punjab","addressCountry":"PK"},
+  "telephone":"+92-313-7015255",
   "priceRange":"$$",
-  "openingHours":"Mo-Sa 10:00-21:00"
+  "openingHours":"Mo-Su 09:30-22:00"
 }
 </script>
 </head>
@@ -148,7 +182,7 @@ details.faq[open] .faq-icon{transform:rotate(45deg)}
 
 <!-- ============ TOP ANNOUNCEMENT BAR ============ -->
 <div class="relative overflow-hidden text-white" style="background:linear-gradient(90deg,#151210,#2b231c,#151210)">
-  <div class="marquee py-2">
+  <div class="marquee marquee-top py-2.5">
     <div class="marquee-track" id="marqueeTrack"></div>
   </div>
 </div>
@@ -156,9 +190,14 @@ details.faq[open] .faq-icon{transform:rotate(45deg)}
 <!-- ============ NAVBAR ============ -->
 <header id="navbar" class="sticky top-0 z-50 glass border-b" style="border-color:var(--border)">
   <div class="max-w-7xl mx-auto px-3 sm:px-4 h-16 flex items-center justify-between gap-2">
-    <a href="#home" class="flex items-center gap-2 shrink-0">
-      <span class="w-9 h-9 rounded-xl grid place-items-center font-display font-bold text-base" style="background:var(--gold);color:#fff">AF</span>
-      <span class="font-display text-[17px] sm:text-lg font-bold leading-none">Ali <span class="gold">Furniture</span></span>
+    <a href="#home" id="navBrand" class="flex items-center gap-2.5 shrink-0 group">
+      <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl grid place-items-center font-display font-bold text-lg shadow-md transition group-hover:scale-105 shrink-0" style="background:linear-gradient(135deg,#b08d57,#e5c483);color:#1a1614;box-shadow:0 4px 14px rgba(176,141,87,.35)">
+        <span class="text-sm font-bold tracking-tighter">AF</span>
+      </div>
+      <div class="flex flex-col leading-tight">
+        <span class="font-display text-[17px] sm:text-xl font-bold tracking-tight group-hover:text-[var(--gold)] transition">Ali <span class="gold">Furniture</span></span>
+        <span class="text-[9px] sm:text-[10px] tracking-[0.22em] uppercase font-semibold text-[var(--gold)] -mt-0.5">and decor point</span>
+      </div>
     </a>
 
     <nav class="hidden lg:flex items-center gap-7 text-sm font-medium">
@@ -202,11 +241,14 @@ details.faq[open] .faq-icon{transform:rotate(45deg)}
 <!-- ============ HERO ============ -->
 <section id="home" class="relative min-h-[86vh] flex items-center overflow-hidden">
   <img id="heroImg" alt="Ali Furniture showroom" class="absolute inset-0 w-full h-full object-cover" src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=70" onerror="imgFail(this)">
-  <div class="absolute inset-0" style="background:linear-gradient(90deg,rgba(12,10,8,.92) 0%,rgba(12,10,8,.62) 45%,rgba(12,10,8,.25) 100%)"></div>
+  <div class="absolute inset-0" style="background:linear-gradient(90deg,rgba(12,10,8,.92) 0%,rgba(12,10,8,.65) 50%,rgba(12,10,8,.3) 100%)"></div>
   <div class="relative max-w-7xl mx-auto px-4 py-20 sm:py-28 w-full">
-    <p class="uppercase tracking-[.32em] text-[11px] mb-4" style="color:var(--gold2)">Since 2009 · Lahore, Pakistan</p>
+    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full mb-4 border border-[var(--gold)]/30" style="background:rgba(176,141,87,.15)">
+      <i class="fa-solid fa-location-dot text-xs text-[var(--gold2)]"></i>
+      <p class="uppercase tracking-[.25em] text-[11px] font-semibold text-[var(--gold2)]">Farooq Azam Road, Niazi Chowk · Jhang Saddar</p>
+    </div>
     <h1 id="heroTitle" class="font-display text-4xl sm:text-6xl lg:text-7xl font-bold leading-[1.08] max-w-2xl text-white">Furniture That Defines Your Home</h1>
-    <p id="heroSub" class="mt-5 max-w-xl text-sm sm:text-base text-white/75 leading-relaxed">Handcrafted from premium Sheesham &amp; Ash wood by master craftsmen. Built to last generations.</p>
+    <p id="heroSub" class="mt-5 max-w-xl text-sm sm:text-base text-white/80 leading-relaxed">Handcrafted solid Sheesham &amp; Ash wood furniture by Malik Irfan. Built to last generations, delivered with pride across Pakistan.</p>
     <div class="mt-8 flex flex-wrap gap-3">
       <a href="#shop" class="btn btn-gold px-7 py-3.5 text-sm"><i class="fa-solid fa-couch"></i><span data-i18n="shop_now">Shop Now</span></a>
       <a id="heroWa" href="#" target="_blank" rel="noopener" class="btn px-7 py-3.5 text-sm text-white border border-white/30 hover:bg-white/10">
@@ -221,24 +263,36 @@ details.faq[open] .faq-icon{transform:rotate(45deg)}
   </div>
 </section>
 
-<!-- ============ TRUST / FEATURES STRIP ============ -->
-<section class="bg-alt border-y" style="border-color:var(--border)">
-  <div class="max-w-7xl mx-auto px-4 py-7 grid grid-cols-2 lg:grid-cols-4 gap-5">
-    <div class="flex items-center gap-3 reveal">
-      <div class="w-10 h-10 rounded-xl grid place-items-center shrink-0" style="background:rgba(176,141,87,.12);color:var(--gold)"><i class="fa-solid fa-truck-fast"></i></div>
-      <div><p class="text-[13px] font-semibold leading-tight" data-i18n="f1_t">Free Delivery</p><p class="text-[11px] muted mt-0.5" data-i18n="f1_s">Orders above Rs 50,000</p></div>
+<!-- ============ TRUST / FEATURES (SEPARATE STANDALONE SECTION WITH HOVER EFFECTS) ============ -->
+<section class="max-w-7xl mx-auto px-4 py-10 sm:py-14 relative z-10">
+  <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+    <div class="trust-card p-5 sm:p-6 group cursor-pointer shadow-sm">
+      <div class="w-12 h-12 rounded-2xl grid place-items-center mb-3.5 transition-all duration-300 group-hover:scale-110 group-hover:bg-[var(--gold)] group-hover:text-white" style="background:rgba(176,141,87,.14);color:var(--gold)">
+        <i class="fa-solid fa-truck-fast text-xl"></i>
+      </div>
+      <p class="text-sm sm:text-base font-bold leading-tight" data-i18n="f1_t">Free Delivery</p>
+      <p class="text-xs muted mt-1.5 leading-relaxed" data-i18n="f1_s">Orders above Rs 50,000</p>
     </div>
-    <div class="flex items-center gap-3 reveal">
-      <div class="w-10 h-10 rounded-xl grid place-items-center shrink-0" style="background:rgba(176,141,87,.12);color:var(--gold)"><i class="fa-solid fa-money-bill-wave"></i></div>
-      <div><p class="text-[13px] font-semibold leading-tight" data-i18n="f2_t">Cash on Delivery</p><p class="text-[11px] muted mt-0.5" data-i18n="f2_s">Pay when you receive</p></div>
+    <div class="trust-card p-5 sm:p-6 group cursor-pointer shadow-sm">
+      <div class="w-12 h-12 rounded-2xl grid place-items-center mb-3.5 transition-all duration-300 group-hover:scale-110 group-hover:bg-[var(--gold)] group-hover:text-white" style="background:rgba(176,141,87,.14);color:var(--gold)">
+        <i class="fa-solid fa-money-bill-wave text-xl"></i>
+      </div>
+      <p class="text-sm sm:text-base font-bold leading-tight" data-i18n="f2_t">Cash on Delivery</p>
+      <p class="text-xs muted mt-1.5 leading-relaxed" data-i18n="f2_s">Pay when you receive</p>
     </div>
-    <div class="flex items-center gap-3 reveal">
-      <div class="w-10 h-10 rounded-xl grid place-items-center shrink-0" style="background:rgba(176,141,87,.12);color:var(--gold)"><i class="fa-solid fa-rotate-left"></i></div>
-      <div><p class="text-[13px] font-semibold leading-tight" data-i18n="f3_t">7-Day Return</p><p class="text-[11px] muted mt-0.5" data-i18n="f3_s">Easy exchange policy</p></div>
+    <div class="trust-card p-5 sm:p-6 group cursor-pointer shadow-sm">
+      <div class="w-12 h-12 rounded-2xl grid place-items-center mb-3.5 transition-all duration-300 group-hover:scale-110 group-hover:bg-[var(--gold)] group-hover:text-white" style="background:rgba(176,141,87,.14);color:var(--gold)">
+        <i class="fa-solid fa-rotate-left text-xl"></i>
+      </div>
+      <p class="text-sm sm:text-base font-bold leading-tight" data-i18n="f3_t">Easy Exchange Policy</p>
+      <p class="text-xs muted mt-1.5 leading-relaxed" data-i18n="f3_s">Hassle-free exchange policy</p>
     </div>
-    <div class="flex items-center gap-3 reveal">
-      <div class="w-10 h-10 rounded-xl grid place-items-center shrink-0" style="background:rgba(176,141,87,.12);color:var(--gold)"><i class="fa-solid fa-gem"></i></div>
-      <div><p class="text-[13px] font-semibold leading-tight" data-i18n="f4_t">Premium Quality</p><p class="text-[11px] muted mt-0.5" data-i18n="f4_s">Solid Sheesham wood</p></div>
+    <div class="trust-card p-5 sm:p-6 group cursor-pointer shadow-sm">
+      <div class="w-12 h-12 rounded-2xl grid place-items-center mb-3.5 transition-all duration-300 group-hover:scale-110 group-hover:bg-[var(--gold)] group-hover:text-white" style="background:rgba(176,141,87,.14);color:var(--gold)">
+        <i class="fa-solid fa-gem text-xl"></i>
+      </div>
+      <p class="text-sm sm:text-base font-bold leading-tight" data-i18n="f4_t">Premium Quality</p>
+      <p class="text-xs muted mt-1.5 leading-relaxed" data-i18n="f4_s">Solid Sheesham &amp; Ash wood</p>
     </div>
   </div>
 </section>
@@ -301,14 +355,19 @@ details.faq[open] .faq-icon{transform:rotate(45deg)}
   <div id="recentTrack" class="flex gap-3 overflow-x-auto pb-2"></div>
 </section>
 
-<!-- ============ NEW ARRIVALS MARQUEE ============ -->
-<section class="bg-alt border-y py-10 overflow-hidden" style="border-color:var(--border)">
+<!-- ============ DOUBLE LINE MARQUEE (SHOWCASE) ============ -->
+<section class="bg-alt border-y py-12 overflow-hidden space-y-4" style="border-color:var(--border)">
   <div class="text-center mb-6">
-    <p class="uppercase tracking-[.28em] text-[11px] gold mb-2" data-i18n="fresh">Fresh From The Workshop</p>
-    <h2 class="font-display text-2xl sm:text-4xl font-bold" data-i18n="new_arrivals">New Arrivals</h2>
+    <p class="uppercase tracking-[.28em] text-[11px] gold mb-2" data-i18n="fresh">Handcrafted In Jhang Saddar</p>
+    <h2 class="font-display text-2xl sm:text-4xl font-bold" data-i18n="new_arrivals">Trending Showcase &amp; New Arrivals</h2>
   </div>
+  <!-- Line 1: Left to Right (Normal) -->
   <div class="marquee marquee-slow">
-    <div class="marquee-track" id="arrivalsTrack"></div>
+    <div class="marquee-track" id="arrivalsTrack1"></div>
+  </div>
+  <!-- Line 2: Right to Left (Reverse) -->
+  <div class="marquee marquee-slow marquee-rev">
+    <div class="marquee-track" id="arrivalsTrack2"></div>
   </div>
 </section>
 
@@ -317,9 +376,9 @@ details.faq[open] .faq-icon{transform:rotate(45deg)}
   <div class="grid lg:grid-cols-2 gap-10 items-center">
     <div class="reveal order-2 lg:order-1">
       <p class="uppercase tracking-[.28em] text-[11px] gold mb-3" data-i18n="our_story">Our Story</p>
-      <h2 class="font-display text-3xl sm:text-4xl font-bold leading-tight" data-i18n="about_title">Three Generations of Woodworking Excellence</h2>
-      <p class="muted text-sm mt-5 leading-relaxed" data-i18n="about_p1">Ali Furniture began in 2009 as a small family workshop in Lahore. Today we are a full showroom and manufacturing unit — but every piece is still built the same way: by hand, by craftsmen who have spent their lives with wood.</p>
-      <p class="muted text-sm mt-3 leading-relaxed" data-i18n="about_p2">We source solid Sheesham (Tali) and Ash wood, season it properly, and finish it with hand-rubbed oils. No particle board. No shortcuts. Just furniture that your grandchildren will argue over.</p>
+      <h2 class="font-display text-3xl sm:text-4xl font-bold leading-tight" data-i18n="about_title">Craftsmanship &amp; Trust by Malik Irfan</h2>
+      <p class="muted text-sm mt-5 leading-relaxed" data-i18n="about_p1">Ali Furniture &amp; Decor Point, led by Malik Irfan, is your premier destination on Farooq Azam Road, near Niazi Chowk, Jhang Saddar. We craft every article with pure passion, employing seasoned artisans who master the art of solid wood fabrication.</p>
+      <p class="muted text-sm mt-3 leading-relaxed" data-i18n="about_p2">From royal wedding sets and luxury velvet sofas to executive office desks and wardrobes, we use 100% genuine Sheesham (Tali) and Ash wood. With our Easy Exchange Policy and nationwide delivery, your satisfaction is our lifelong promise.</p>
       <div class="grid grid-cols-3 gap-4 mt-7">
         <div class="card p-4 text-center"><div class="font-display text-2xl font-bold gold"><span class="counter" data-target="5000">0</span>+</div><div class="text-[11px] muted mt-1" data-i18n="stat_homes">Happy Homes</div></div>
         <div class="card p-4 text-center"><div class="font-display text-2xl font-bold gold"><span class="counter" data-target="250">0</span>+</div><div class="text-[11px] muted mt-1" data-i18n="stat_products">Designs</div></div>
@@ -401,14 +460,18 @@ details.faq[open] .faq-icon{transform:rotate(45deg)}
           <button type="submit" class="btn btn-gold py-3 text-sm"><i class="fa-brands fa-whatsapp text-lg"></i><span data-i18n="send_wa">Send on WhatsApp</span></button>
         </form>
         <div class="mt-5 pt-5 border-t grid gap-3 text-sm" style="border-color:var(--border)">
-          <a id="contactWa" href="#" target="_blank" rel="noopener" class="flex items-center gap-3 hover:text-[var(--gold)] transition"><i class="fa-brands fa-whatsapp text-lg gold w-5"></i><span id="waText">+92 300 1234567</span></a>
-          <a id="contactPhone" href="#" class="flex items-center gap-3 hover:text-[var(--gold)] transition"><i class="fa-solid fa-phone text-lg gold w-5"></i><span id="phoneText">+92 300 1234567</span></a>
+          <div class="flex items-center gap-3">
+            <i class="fa-solid fa-user-tie text-lg gold w-5"></i>
+            <div><span class="text-xs muted block">Owner / Proprietor:</span><span class="font-semibold">Malik Irfan</span></div>
+          </div>
+          <a id="contactWa" href="https://wa.me/923137015255" target="_blank" rel="noopener" class="flex items-center gap-3 hover:text-[var(--gold)] transition"><i class="fa-brands fa-whatsapp text-lg text-emerald-500 w-5"></i><span>WhatsApp: 0313-7015255</span></a>
+          <a id="contactPhone" href="tel:03137015255" class="flex items-center gap-3 hover:text-[var(--gold)] transition"><i class="fa-solid fa-phone text-lg gold w-5"></i><span id="phoneText">Call: 0313-7015255 / 0348-1298093</span></a>
           <a id="contactEmail" href="#" class="flex items-center gap-3 hover:text-[var(--gold)] transition"><i class="fa-solid fa-envelope text-lg gold w-5"></i><span id="emailText">info@alifurniture.pk</span></a>
-          <p class="flex items-start gap-3"><i class="fa-solid fa-location-dot text-lg gold w-5 mt-0.5"></i><span id="addrText" class="muted">Main Boulevard, Gulberg III, Lahore</span></p>
+          <p class="flex items-start gap-3"><i class="fa-solid fa-location-dot text-lg gold w-5 mt-0.5"></i><span id="addrText" class="muted leading-snug">Farooq Azam road, near niazi chowk jhang saddar</span></p>
         </div>
       </div>
       <div class="card overflow-hidden reveal min-h-[320px]">
-        <iframe id="mapFrame" src="" width="100%" height="100%" style="border:0;min-height:380px" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe id="mapFrame" src="https://www.google.com/maps?q=Niazi+Chowk+Jhang+Saddar+Pakistan&output=embed" width="100%" height="100%" style="border:0;min-height:380px" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   </div>
@@ -428,11 +491,16 @@ details.faq[open] .faq-icon{transform:rotate(45deg)}
   <div class="max-w-7xl mx-auto px-4">
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-9 mb-10">
       <div>
-        <div class="flex items-center gap-2 mb-4">
-          <span class="w-9 h-9 rounded-xl grid place-items-center font-display font-bold" style="background:var(--gold);color:#fff">AF</span>
-          <span class="font-display text-lg font-bold">Ali <span class="gold">Furniture</span></span>
+        <div id="footBrand" class="flex items-center gap-2.5 mb-4">
+          <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl grid place-items-center font-display font-bold text-lg shadow-md shrink-0" style="background:linear-gradient(135deg,#b08d57,#e5c483);color:#1a1614;box-shadow:0 4px 14px rgba(176,141,87,.35)">
+            <span class="text-sm font-bold tracking-tighter">AF</span>
+          </div>
+          <div class="flex flex-col leading-tight">
+            <span class="font-display text-[17px] sm:text-xl font-bold tracking-tight">Ali <span class="gold">Furniture</span></span>
+            <span class="text-[9px] sm:text-[10px] tracking-[0.22em] uppercase font-semibold text-[var(--gold)] -mt-0.5">and decor point</span>
+          </div>
         </div>
-        <p class="text-xs muted leading-relaxed" data-i18n="footer_about">Premium handcrafted furniture from Lahore. Solid Sheesham wood, made to order, delivered all over Pakistan.</p>
+        <p class="text-xs muted leading-relaxed" data-i18n="footer_about">Premium handcrafted furniture from Jhang Saddar by Malik Irfan. Solid Sheesham wood, made to order, delivered all over Pakistan.</p>
         <div class="flex gap-2 mt-4" id="socialIcons"></div>
       </div>
       <div>
@@ -450,15 +518,16 @@ details.faq[open] .faq-icon{transform:rotate(45deg)}
         <ul class="space-y-2 text-xs muted">
           <li><button onclick="openPolicy('privacy')" class="hover:text-[var(--gold)] transition text-start" data-i18n="privacy">Privacy Policy</button></li>
           <li><button onclick="openPolicy('terms')" class="hover:text-[var(--gold)] transition text-start" data-i18n="terms">Terms &amp; Conditions</button></li>
-          <li><button onclick="openPolicy('returns')" class="hover:text-[var(--gold)] transition text-start" data-i18n="returns">Return &amp; Exchange Policy</button></li>
+          <li><button onclick="openPolicy('returns')" class="hover:text-[var(--gold)] transition text-start" data-i18n="returns">Easy Exchange Policy</button></li>
           <li><button onclick="openPolicy('delivery')" class="hover:text-[var(--gold)] transition text-start" data-i18n="delivery_policy">Delivery Policy</button></li>
         </ul>
       </div>
       <div>
         <h4 class="font-semibold text-sm mb-3" data-i18n="contact_us">Contact Us</h4>
         <ul class="space-y-2 text-xs muted">
-          <li class="flex items-start gap-2"><i class="fa-solid fa-location-dot gold mt-0.5"></i><span id="footAddr">Gulberg III, Lahore</span></li>
-          <li class="flex items-center gap-2"><i class="fa-solid fa-phone gold"></i><span id="footPhone">+92 300 1234567</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-user-tie gold mt-0.5"></i><span>Malik Irfan</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-location-dot gold mt-0.5"></i><span id="footAddr">Farooq Azam road, near niazi chowk jhang saddar</span></li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-phone gold"></i><span id="footPhone">0313-7015255 / 0348-1298093</span></li>
           <li class="flex items-center gap-2"><i class="fa-solid fa-envelope gold"></i><span id="footEmail">info@alifurniture.pk</span></li>
         </ul>
         <div class="mt-4 flex items-center gap-3">
@@ -467,12 +536,16 @@ details.faq[open] .faq-icon{transform:rotate(45deg)}
         </div>
       </div>
     </div>
-    <div class="border-t pt-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] muted" style="border-color:var(--border)">
-      <p>© <span id="year"></span> Ali Furniture. <span data-i18n="rights">All rights reserved.</span></p>
-      <div class="flex items-center gap-3">
-        <span data-i18n="powered">Powered by</span>
-        <a href="https://wa.me/923001234567" target="_blank" rel="noopener" class="gold font-semibold hover:underline">PixelForge Studio</a>
-        <button id="adminLoginBtn" class="px-3 py-1.5 rounded-lg border transition hover:border-[var(--gold)] hover:text-[var(--gold)]" style="border-color:var(--border)"><i class="fa-solid fa-lock text-[10px] me-1"></i><span data-i18n="admin_login">Admin</span></button>
+    <div class="border-t pt-6 flex flex-col items-center justify-center text-center gap-2.5 text-[11px] muted" style="border-color:var(--border)">
+      <div class="flex items-center justify-center gap-2 flex-wrap text-xs">
+        <span>Designed by <strong class="gold font-semibold">Tashbeel</strong></span>
+        <span class="opacity-40">·</span>
+        <span>Powered by <a href="https://wa.me/923001234567" target="_blank" rel="noopener" class="gold font-semibold hover:underline">Mirai_Digital_Labs</a></span>
+      </div>
+      <div class="flex items-center justify-center gap-1.5 opacity-80">
+        <p>&copy; <span id="year"></span> Ali Furniture &amp; Decor Point. <span data-i18n="rights">All rights reserved.</span></p>
+        <!-- Discreet Admin Trigger (visitors won't notice it) -->
+        <span id="adminLoginBtn" class="cursor-pointer text-muted opacity-25 hover:opacity-100 transition px-1 inline-block" title="Store System"><i class="fa-solid fa-lock text-[9px]"></i></span>
       </div>
     </div>
   </div>
@@ -537,6 +610,35 @@ details.faq[open] .faq-icon{transform:rotate(45deg)}
       <p id="popupText" class="muted text-sm mt-3"></p>
       <button onclick="closePopup()" class="btn btn-gold w-full py-3 mt-6 text-sm" data-i18n="claim_offer">Claim Offer</button>
     </div>
+  </div>
+</div>
+
+<!-- ============ PWA APP INSTALL POPUP (FIRST VISIT) ============ -->
+<div id="installAppModal" class="modal" onclick="if(event.target===this)closeModal('installAppModal')">
+  <div class="modal-box max-w-sm text-center relative overflow-hidden p-6 sm:p-7 border" style="border-color:var(--gold)">
+    <button onclick="closeModal('installAppModal')" class="absolute top-3 right-3 w-8 h-8 rounded-lg hover:bg-[var(--alt)] transition z-10"><i class="fa-solid fa-xmark"></i></button>
+    <div class="w-16 h-16 mx-auto rounded-2xl grid place-items-center mb-3 font-display font-bold text-2xl shadow-xl" style="background:linear-gradient(135deg,#b08d57,#e5c483);color:#1a1614">
+      AF
+    </div>
+    <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider mb-2" style="background:rgba(176,141,87,.15);color:var(--gold)">
+      <i class="fa-solid fa-mobile-screen-button"></i> Official Mobile App
+    </div>
+    <h3 class="font-display text-xl sm:text-2xl font-bold">Ali Furniture</h3>
+    <p class="text-[10px] uppercase tracking-widest font-semibold gold -mt-0.5 mb-3">and decor point</p>
+    <p class="muted text-xs leading-relaxed mb-4">Official app install karein apne mobile par aur payein super fast browsing, direct WhatsApp order aur exclusive discount offers!</p>
+    
+    <div class="space-y-2 text-start text-xs card p-3 mb-5" style="background:var(--alt)">
+      <div class="flex items-center gap-2"><i class="fa-solid fa-bolt text-amber-500 text-xs"></i><span>1-Tap fast browsing &amp; offline mode</span></div>
+      <div class="flex items-center gap-2"><i class="fa-brands fa-whatsapp text-emerald-500 text-xs"></i><span>Direct WhatsApp contact with Malik Irfan</span></div>
+      <div class="flex items-center gap-2"><i class="fa-solid fa-tag gold text-xs"></i><span>Exclusive seasonal offers &amp; discounts</span></div>
+    </div>
+    
+    <button id="pwaInstallNowBtn" onclick="triggerPwaInstall()" class="btn btn-gold w-full py-3.5 text-sm font-bold shadow-lg">
+      <i class="fa-solid fa-download me-1.5"></i> Install App on Phone
+    </button>
+    <button onclick="closeModal('installAppModal')" class="mt-2 text-xs muted hover:underline w-full py-1.5">
+      Continue on website
+    </button>
   </div>
 </div>
 
@@ -685,6 +787,17 @@ details.faq[open] .faq-icon{transform:rotate(45deg)}
         <!-- SETTINGS -->
         <div class="admin-tab hidden" id="tab-settings">
           <div class="card p-4 mb-4">
+            <h3 class="font-semibold text-sm mb-3">Store Branding &amp; Logo</h3>
+            <div class="grid sm:grid-cols-2 gap-3">
+              <input id="s_logoUrl" class="inp sm:col-span-2" placeholder="Logo Image URL (Leave empty for default Gold Emblem)">
+              <div class="sm:col-span-2">
+                <label class="text-xs muted block mb-1.5"><i class="fa-solid fa-image me-1"></i>Or upload Logo image directly from your phone/PC:</label>
+                <input type="file" id="s_logoFile" accept="image/*" class="inp">
+              </div>
+            </div>
+          </div>
+
+          <div class="card p-4 mb-4">
             <h3 class="font-semibold text-sm mb-3">Store Content</h3>
             <div class="grid sm:grid-cols-2 gap-3">
               <input id="s_topBar" class="inp sm:col-span-2" placeholder="Top Bar Text (English)">
@@ -698,17 +811,20 @@ details.faq[open] .faq-icon{transform:rotate(45deg)}
           </div>
 
           <div class="card p-4 mb-4">
-            <h3 class="font-semibold text-sm mb-3">Contact &amp; Social</h3>
+            <h3 class="font-semibold text-sm mb-3">Contact, Owner &amp; Social</h3>
             <div class="grid sm:grid-cols-2 gap-3">
-              <input id="s_whatsapp" class="inp" placeholder="WhatsApp number (923001234567)">
-              <input id="s_phone" class="inp" placeholder="Display phone (+92 300 1234567)">
+              <input id="s_owner" class="inp" placeholder="Owner Name (e.g. Malik Irfan)">
+              <input id="s_whatsapp" class="inp" placeholder="WhatsApp number (923137015255)">
+              <input id="s_phone" class="inp" placeholder="Primary phone (0313-7015255)">
+              <input id="s_phone2" class="inp" placeholder="Secondary phone (0348-1298093)">
               <input id="s_email" class="inp" placeholder="Email">
-              <input id="s_address" class="inp" placeholder="Showroom address">
+              <input id="s_address" class="inp" placeholder="Showroom address (Jhang Saddar)">
               <input id="s_mapEmbed" class="inp sm:col-span-2" placeholder="Google Maps embed URL">
               <input id="s_facebook" class="inp" placeholder="Facebook URL">
               <input id="s_instagram" class="inp" placeholder="Instagram URL">
-              <input id="s_tiktok" class="inp" placeholder="TikTok URL">
+              <input id="s_twitter" class="inp" placeholder="Twitter / X URL">
               <input id="s_youtube" class="inp" placeholder="YouTube URL">
+              <input id="s_tiktok" class="inp sm:col-span-2" placeholder="TikTok URL">
               <input id="s_videoUrl" class="inp sm:col-span-2" placeholder="Workshop video link (YouTube)">
               <textarea id="s_showroom" class="inp sm:col-span-2" rows="2" placeholder="Showroom gallery image URLs (comma separated)"></textarea>
             </div>
@@ -829,20 +945,25 @@ const uid = () => 'p' + Date.now().toString(36) + Math.random().toString(36).sli
 const DEFAULTS = {
   settings: {
     brand: "Ali Furniture",
-    topBar: "✨ Free Delivery on Orders Above Rs 50,000 · Cash on Delivery Available · Custom Orders Welcome ✨",
-    topBarUr: "✨ 50,000 روپے سے زائد آرڈرز پر مفت ڈیلیوری · کیش آن ڈیلیوری دستیاب · کسٹم آرڈرز خوش آمدید ✨",
+    subBrand: "and decor point",
+    owner: "Malik Irfan",
+    logoUrl: "",
+    topBar: "✨ Free Delivery Above Rs 50,000 · Easy Exchange Policy · Malik Irfan: 0313-7015255 / 0348-1298093 ✨",
+    topBarUr: "✨ 50,000 روپے سے زائد آرڈرز پر مفت ڈیلیوری · آسان ایکسچینج پالیسی · ملک عرفان: 03137015255 / 03481298093 ✨",
     heroTitle: "Furniture That Defines Your Home",
     heroTitleUr: "فرنیچر جو آپ کے گھر کی پہچان ہے",
-    heroSub: "Handcrafted from premium Sheesham & Ash wood by master craftsmen in Lahore. Built to last generations.",
-    heroSubUr: "لاہور کے ماہر کاریگروں کے ہاتھ سے تیار کردہ شیشم اور اش لکڑی کا فرنیچر۔ نسلوں تک قائم رہنے کے لیے بنایا گیا۔",
+    heroSub: "Handcrafted from solid Sheesham & Ash wood by master craftsmen. Ali Furniture & Decor Point by Malik Irfan.",
+    heroSubUr: "علی فرنیچر اینڈ ڈیکور پوائنٹ — ملک عرفان کی زیر نگرانی تیار کردہ شیشم کا پریمیم فرنیچر۔",
     heroImage: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=70",
-    whatsapp: "923001234567",
-    phone: "+92 300 1234567",
+    whatsapp: "923137015255",
+    phone: "0313-7015255",
+    phone2: "0348-1298093",
     email: "info@alifurniture.pk",
-    address: "Main Boulevard, Gulberg III, Lahore, Pakistan",
-    mapEmbed: "https://www.google.com/maps?q=Gulberg+III+Lahore+Pakistan&output=embed",
+    address: "Farooq Azam road, near niazi chowk jhang saddar",
+    mapEmbed: "https://www.google.com/maps?q=Niazi+Chowk+Jhang+Saddar+Pakistan&output=embed",
     facebook: "https://facebook.com/",
     instagram: "https://instagram.com/",
+    twitter: "https://twitter.com/",
     tiktok: "",
     youtube: "https://youtube.com/",
     videoUrl: "https://www.youtube.com/",
@@ -853,102 +974,378 @@ const DEFAULTS = {
       "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=700&q=70"
     ],
     saleMode: false,
-    saleText: "EID SALE — UP TO 30% OFF",
+    saleText: "SPECIAL OFFER — UP TO 30% OFF",
     saleEnds: "",
     coupon: { code: "ALI10", type: "percent", value: 10 },
     cities: [
-      { name: "Lahore", charge: 0, days: "2-3 days" },
-      { name: "Karachi", charge: 3500, days: "4-6 days" },
+      { name: "Jhang", charge: 0, days: "1-2 days" },
+      { name: "Faisalabad", charge: 1500, days: "2-3 days" },
+      { name: "Lahore", charge: 2000, days: "2-4 days" },
+      { name: "Multan", charge: 2000, days: "2-4 days" },
       { name: "Islamabad", charge: 2500, days: "3-5 days" },
       { name: "Rawalpindi", charge: 2500, days: "3-5 days" },
-      { name: "Faisalabad", charge: 1500, days: "3-4 days" },
-      { name: "Multan", charge: 2000, days: "4-5 days" },
-      { name: "Peshawar", charge: 3000, days: "5-7 days" },
-      { name: "Quetta", charge: 4000, days: "6-8 days" }
+      { name: "Sargodha", charge: 1800, days: "2-3 days" },
+      { name: "Karachi", charge: 3500, days: "4-6 days" },
+      { name: "Peshawar", charge: 3000, days: "4-6 days" },
+      { name: "Quetta", charge: 4000, days: "5-7 days" }
     ],
-    popup: { enabled: true, title: "Get 10% Off Your First Order", text: "Use code ALI10 at checkout. Valid on all orders above Rs 50,000." },
+    popup: { enabled: true, title: "Special Offer — 10% Flat Discount", text: "Ali Furniture & Decor Point (Malik Irfan) ki taraf se har order par 10% Discount! Code ALI10 use karein ya WhatsApp par rabta karein." },
     password: "admin123",
     cloudUrl: ""
   },
   products: [
+    // SOFAS
     {
-      id: "p1", title: "Royal 7-Seater Sofa Set", titleUr: "رائل 7 سیٹر صوفہ سیٹ",
+      id: "p1", title: "Royal 7-Seater Emerald Velvet Sofa", titleUr: "رائل 7 سیٹر ویلوٹ صوفہ سیٹ",
       price: 185000, oldPrice: 225000, category: "Sofa", categoryUr: "صوفہ", badge: "best", stock: "in",
-      desc: "A grand 7-seater sofa set upholstered in premium velvet with a solid Sheesham wood frame. Hand-carved detailing on the arms and high-density foam cushions that hold their shape for years.",
-      descUr: "شیشم کی لکڑی کے فریم کے ساتھ پریمیم ویلوٹ میں ملبوس 7 سیٹر صوفہ سیٹ۔ بازوؤں پر ہاتھ سے کندہ کاری اور اعلیٰ کوالٹی کے فوم کشن۔",
+      desc: "A majestic 7-seater sofa set upholstered in imported emerald velvet with a solid Sheesham wood internal structure. Hand-carved detailing and Molty high-density foam cushions that preserve shape for decades.",
+      descUr: "شیشم کی لکڑی کے فریم اور امپورٹڈ ویلوٹ کے ساتھ 7 سیٹر صوفہ سیٹ۔ بازوؤں پر ہاتھ کی تراش خراش اور پائیدار مولٹی فوم۔",
       images: [
-        "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=70",
-        "https://images.unsplash.com/photo-1567016432779-094069958ea5?auto=format&fit=crop&w=800&q=70",
-        "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=800&q=70"
+        "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1000&h=800&crop=left&q=80",
+        "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1000&h=800&crop=right&q=80",
+        "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1000&h=800&crop=center&q=80"
       ],
       wood: "Solid Sheesham (Tali) Wood", dimensions: "7ft x 3.5ft x 3ft", warranty: "2 Years Frame Warranty",
       deliveryTime: "7-10 working days", emi: 16500, rating: 5
     },
     {
-      id: "p2", title: "Sheesham King Size Bed", titleUr: "شیشم کنگ سائز بیڈ",
-      price: 145000, oldPrice: 0, category: "Bed", categoryUr: "بیڈ", badge: "new", stock: "in",
-      desc: "Handcrafted king size bed in solid Sheesham wood with a tall tufted headboard. Includes side tables. Choose from natural polish or walnut finish.",
-      descUr: "شیشم کی لکڑی سے تیار کنگ سائز بیڈ، اونچے ہیڈ بورڈ کے ساتھ۔ سائیڈ ٹیبلز شامل ہیں۔",
+      id: "p2", title: "Modern Cream Luxury Sectional L-Sofa", titleUr: "ماڈرن لگژری ایل شیپ صوفہ",
+      price: 165000, oldPrice: 195000, category: "Sofa", categoryUr: "صوفہ", badge: "new", stock: "in",
+      desc: "Spacious contemporary L-shaped sofa designed for modern family lounges. Premium stain-resistant textured fabric, solid wood foundation, and comfortable multi-layer padding.",
+      descUr: "خوبصورت اور جدید ایل شیپ صوفہ، داغ دھبوں سے محفوظ فیبرک اور شیشم کے مضبوط فریم کے ساتھ۔",
       images: [
-        "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=800&q=70",
-        "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=800&q=70"
+        "https://images.unsplash.com/photo-1567016432779-094069958ea5?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1567016432779-094069958ea5?auto=format&fit=crop&w=1000&h=800&crop=left&q=80",
+        "https://images.unsplash.com/photo-1567016432779-094069958ea5?auto=format&fit=crop&w=1000&h=800&crop=right&q=80",
+        "https://images.unsplash.com/photo-1567016432779-094069958ea5?auto=format&fit=crop&w=1000&h=800&crop=center&q=80"
       ],
-      wood: "Solid Sheesham Wood", dimensions: "78in x 72in", warranty: "3 Years Warranty",
+      wood: "Sheesham & Ash Wood Frame", dimensions: "9ft x 6ft Sectional", warranty: "3 Years Warranty",
+      deliveryTime: "8-12 working days", emi: 14500, rating: 5
+    },
+    {
+      id: "p3", title: "Chesterfield Hand-Tufted Leatherette Sofa", titleUr: "چیسٹرفیلڈ ٹفٹڈ صوفہ",
+      price: 195000, oldPrice: 230000, category: "Sofa", categoryUr: "صوفہ", badge: "best", stock: "in",
+      desc: "Classic British style deep button-tufted chesterfield sofa. Crafted with seasoned Sheesham wood and high-grade breathable leatherette for royal living spaces.",
+      descUr: "کلاسک چیسٹرفیلڈ ڈیزائن، ہاتھ سے لگی ہوئی ٹفٹنگ اور شیشم کی اندرونی ساخت۔ شاہانہ بیٹھک کے لیے۔",
+      images: [
+        "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1000&h=800&crop=left&q=80",
+        "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1000&h=800&crop=right&q=80",
+        "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1000&h=800&crop=center&q=80"
+      ],
+      wood: "Solid Sheesham Wood", dimensions: "7.5ft x 3.2ft", warranty: "2 Years Warranty",
+      deliveryTime: "10-14 working days", emi: 17000, rating: 5
+    },
+    {
+      id: "p4", title: "Scandinavian Solid Wood 5-Seater Sofa", titleUr: "سکینڈینیوین ووڈن 5 سیٹر صوفہ",
+      price: 135000, oldPrice: 155000, category: "Sofa", categoryUr: "صوفہ", badge: "", stock: "in",
+      desc: "Visible handcrafted Sheesham wooden arms with natural grain luster, paired with soft grey cushions. Minimalist elegance that complements any room decor.",
+      descUr: "شیشم کی واضح اور خوبصورت لکڑی کے بازوؤں کے ساتھ 5 سیٹر صوفہ۔ سادہ اور باوقار ڈیزائن۔",
+      images: [
+        "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=1000&h=800&crop=left&q=80",
+        "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=1000&h=800&crop=right&q=80",
+        "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=1000&h=800&crop=center&q=80"
+      ],
+      wood: "100% Solid Sheesham", dimensions: "6.8ft x 3ft", warranty: "2 Years Warranty",
+      deliveryTime: "7-10 working days", emi: 12000, rating: 4
+    },
+
+    // BEDS
+    {
+      id: "p5", title: "Sheesham King Size Tufted Bed", titleUr: "شیشم کنگ سائز ٹفٹڈ بیڈ",
+      price: 145000, oldPrice: 175000, category: "Bed", categoryUr: "بیڈ", badge: "best", stock: "in",
+      desc: "Handcrafted king size bed in solid Sheesham wood with a tall cushioned headboard and matching side tables. Coated with anti-termite German polyurethane seal.",
+      descUr: "شیشم کی ٹھوس لکڑی اور اونچے ٹفٹڈ ہیڈ بورڈ کے ساتھ کنگ سائز بیڈ بمعہ سائیڈ ٹیبلز۔",
+      images: [
+        "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1000&h=800&crop=left&q=80",
+        "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1000&h=800&crop=right&q=80",
+        "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1000&h=800&crop=top&q=80"
+      ],
+      wood: "Solid Sheesham Wood", dimensions: "78in x 72in (King)", warranty: "3 Years Warranty",
       deliveryTime: "10-14 working days", emi: 13000, rating: 5
     },
     {
-      id: "p3", title: "8-Seater Dining Table Set", titleUr: "8 سیٹر ڈائننگ ٹیبل سیٹ",
-      price: 95000, oldPrice: 115000, category: "Dining", categoryUr: "ڈائننگ", badge: "", stock: "in",
-      desc: "Elegant 8-seater dining table with a thick Sheesham top and matching chairs. Treated against moisture and termites. Perfect for large families.",
-      descUr: "8 سیٹر ڈائننگ ٹیبل، موٹی شیشم ٹاپ اور میچنگ کرسیوں کے ساتھ۔ نمی اور دیمک سے محفوظ۔",
+      id: "p6", title: "Royal Carved Bridal Bed Set", titleUr: "رائل برائیڈل کندہ کاری بیڈ سیٹ",
+      price: 180000, oldPrice: 220000, category: "Bed", categoryUr: "بیڈ", badge: "new", stock: "made",
+      desc: "Traditional Jhang master-craftsman hand-carved floral crown bed with dressing table and side tables. Built specifically for wedding packages.",
+      descUr: "جھنگ کے ماہر کاریگروں کے ہاتھ کی خوبصورت کندہ کاری سے مزین برائیڈل بیڈ سیٹ بمعہ ڈریسنگ اور سائیڈ ٹیبلز۔",
       images: [
-        "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=800&q=70",
-        "https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=800&q=70"
+        "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=1000&h=800&crop=left&q=80",
+        "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=1000&h=800&crop=right&q=80",
+        "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=1000&h=800&crop=center&q=80"
       ],
-      wood: "Solid Sheesham Wood", dimensions: "6ft x 3.5ft", warranty: "2 Years Warranty",
-      deliveryTime: "8-12 working days", emi: 8500, rating: 4
+      wood: "Solid Seasoned Sheesham", dimensions: "King Size (6ft x 6.5ft)", warranty: "5 Years Warranty",
+      deliveryTime: "14-20 working days", emi: 16000, rating: 5
     },
     {
-      id: "p4", title: "Executive Office Chair", titleUr: "ایگزیکٹو آفس کرسی",
-      price: 32000, oldPrice: 40000, category: "Office", categoryUr: "آفس", badge: "", stock: "in",
-      desc: "Ergonomic executive chair with genuine leather upholstery, lumbar support, and a heavy-duty gas lift. Built for 8+ hour work days.",
-      descUr: "آرگونومک ایگزیکٹو کرسی، اصلی چمڑے کے ساتھ، کمر سپورٹ اور مضبوط گیس لفٹ۔",
+      id: "p7", title: "Modern Low-Profile Platform Bed", titleUr: "ماڈرن پلیٹ فارم بیڈ",
+      price: 125000, oldPrice: 145000, category: "Bed", categoryUr: "بیڈ", badge: "", stock: "in",
+      desc: "Contemporary Japanese-inspired low height platform bed with wide solid wooden ledges and integrated nightstands. Durable and wobble-free.",
+      descUr: "جدید اسٹائل کا کم اونچائی والا پلیٹ فارم بیڈ، وسیع بارڈر اور شیشم کی قدرتی خوبصورتی کے ساتھ۔",
       images: [
-        "https://images.unsplash.com/photo-1580480055273-228ff5388ef8?auto=format&fit=crop&w=800&q=70",
-        "https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=800&q=70"
+        "https://images.unsplash.com/photo-1540518614846-7ede433c4ef7?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1540518614846-7ede433c4ef7?auto=format&fit=crop&w=1000&h=800&crop=left&q=80",
+        "https://images.unsplash.com/photo-1540518614846-7ede433c4ef7?auto=format&fit=crop&w=1000&h=800&crop=right&q=80",
+        "https://images.unsplash.com/photo-1540518614846-7ede433c4ef7?auto=format&fit=crop&w=1000&h=800&crop=top&q=80"
       ],
-      wood: "Steel Frame + Genuine Leather", dimensions: "Adjustable Height", warranty: "1 Year Warranty",
-      deliveryTime: "3-5 working days", emi: 2900, rating: 4
+      wood: "Solid Sheesham & Ash", dimensions: "King Size (78in x 72in)", warranty: "2 Years Warranty",
+      deliveryTime: "7-10 working days", emi: 11000, rating: 4
     },
     {
-      id: "p5", title: "6-Door Wooden Wardrobe", titleUr: "6 دروازوں والا الماری",
-      price: 165000, oldPrice: 0, category: "Wardrobe", categoryUr: "الماری", badge: "new", stock: "made",
-      desc: "Spacious 6-door wardrobe with full-length mirror, internal drawers, and hanging rails. Made to order in your choice of wood finish and handles.",
-      descUr: "کشادہ 6 دروازوں والی الماری، آئینے، درازوں اور ہینگنگ ریل کے ساتھ۔ آپ کی پسند کے فنش میں تیار۔",
+      id: "p8", title: "Classic Walnut Polish Master Bed", titleUr: "کلاسک اخروٹی پالش ماسٹر بیڈ",
+      price: 138000, oldPrice: 160000, category: "Bed", categoryUr: "بیڈ", badge: "", stock: "in",
+      desc: "Timeless master bedroom bed finished in a deep walnut matte luster. Features heavy post joints and under-bed reinforcement ribs.",
+      descUr: "گہرے اخروٹی رنگ کی پرتعیش پالش اور مضبوط فریم کے ساتھ ماسٹر بیڈ روم کے لیے بہترین انتخاب۔",
       images: [
-        "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=800&q=70",
-        "https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&w=800&q=70"
+        "https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=1000&h=800&crop=left&q=80",
+        "https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=1000&h=800&crop=right&q=80",
+        "https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=1000&h=800&crop=center&q=80"
       ],
-      wood: "Sheesham / Ash Wood", dimensions: "8ft x 7ft x 2ft", warranty: "2 Years Warranty",
+      wood: "Solid Sheesham Wood", dimensions: "King Size (78in x 72in)", warranty: "3 Years Warranty",
+      deliveryTime: "8-12 working days", emi: 12200, rating: 5
+    },
+
+    // DINING
+    {
+      id: "p9", title: "8-Seater Solid Sheesham Dining Table Set", titleUr: "8 سیٹر شیشم ڈائننگ ٹیبل سیٹ",
+      price: 95000, oldPrice: 115000, category: "Dining", categoryUr: "ڈائننگ", badge: "best", stock: "in",
+      desc: "Grand 8-seater dining table with heavy Sheesham wood top, 8 cushioned chairs, and heat-resistant lacquer polish. Perfect for Pakistani gatherings.",
+      descUr: "8 سیٹر ڈائننگ ٹیبل، موٹی شیشم ٹاپ اور میچنگ آرام دہ کرسیوں کے ساتھ۔ گرمی اور نمی سے محفوظ۔",
+      images: [
+        "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=1000&h=800&crop=left&q=80",
+        "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=1000&h=800&crop=right&q=80",
+        "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=1000&h=800&crop=center&q=80"
+      ],
+      wood: "Solid Sheesham Wood", dimensions: "6.5ft x 3.5ft", warranty: "2 Years Warranty",
+      deliveryTime: "8-12 working days", emi: 8500, rating: 5
+    },
+    {
+      id: "p10", title: "Modern Walnut Finish 6-Seater Dining Set", titleUr: "ماڈرن 6 سیٹر ڈائننگ سیٹ",
+      price: 85000, oldPrice: 100000, category: "Dining", categoryUr: "ڈائننگ", badge: "new", stock: "in",
+      desc: "Sleek bevelled-edge dining table with 6 ergonomic upholstered chairs in contemporary dark walnut stain. Easy wipe-clean surface.",
+      descUr: "6 سیٹر نفیس ڈائننگ سیٹ، جدید ڈیزائن اور صاف کرنے میں نہایت آسان۔",
+      images: [
+        "https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=1000&h=800&crop=left&q=80",
+        "https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=1000&h=800&crop=right&q=80",
+        "https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=1000&h=800&crop=center&q=80"
+      ],
+      wood: "Solid Sheesham & Ash", dimensions: "5ft x 3ft", warranty: "2 Years Warranty",
+      deliveryTime: "7-10 working days", emi: 7500, rating: 4
+    },
+    {
+      id: "p11", title: "Round Solid Wood 6-Seater Family Dining Table", titleUr: "گول فیملی ڈائننگ ٹیبل (6 سیٹر)",
+      price: 78000, oldPrice: 92000, category: "Dining", categoryUr: "ڈائننگ", badge: "", stock: "in",
+      desc: "Round pedestal table crafted from thick seasoned timber. Creates an intimate, warm setting for family meals without sharp corners.",
+      descUr: "گول فیملی ڈائننگ ٹیبل، بغیر کونوں کے بچوں کے لیے محفوظ اور پائیدار لکڑی سے تیار۔",
+      images: [
+        "https://images.unsplash.com/photo-1577140917170-285929fb55b7?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1577140917170-285929fb55b7?auto=format&fit=crop&w=1000&h=800&crop=left&q=80",
+        "https://images.unsplash.com/photo-1577140917170-285929fb55b7?auto=format&fit=crop&w=1000&h=800&crop=right&q=80",
+        "https://images.unsplash.com/photo-1577140917170-285929fb55b7?auto=format&fit=crop&w=1000&h=800&crop=center&q=80"
+      ],
+      wood: "Solid Sheesham Wood", dimensions: "4.5ft Diameter", warranty: "2 Years Warranty",
+      deliveryTime: "6-9 working days", emi: 6900, rating: 5
+    },
+    {
+      id: "p12", title: "Minimalist Scandinavian Oak Dining Set", titleUr: "سکینڈینیوین ڈائننگ سیٹ",
+      price: 89000, oldPrice: 105000, category: "Dining", categoryUr: "ڈائننگ", badge: "", stock: "made",
+      desc: "Light natural polish dining set with minimalist tapered legs. Brings Scandinavian warmth and airiness to modern apartments.",
+      descUr: "ہلکی قدرتی پالش اور جدید ڈیزائن کے ساتھ ڈائننگ سیٹ، اپارٹمنٹس اور ماڈرن گھروں کے لیے۔",
+      images: [
+        "https://images.unsplash.com/photo-1615066390971-03e4e1c36ddf?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1615066390971-03e4e1c36ddf?auto=format&fit=crop&w=1000&h=800&crop=left&q=80",
+        "https://images.unsplash.com/photo-1615066390971-03e4e1c36ddf?auto=format&fit=crop&w=1000&h=800&crop=right&q=80",
+        "https://images.unsplash.com/photo-1615066390971-03e4e1c36ddf?auto=format&fit=crop&w=1000&h=800&crop=center&q=80"
+      ],
+      wood: "Solid Ash / Sheesham", dimensions: "5.5ft x 3.2ft", warranty: "2 Years Warranty",
+      deliveryTime: "10-14 working days", emi: 7900, rating: 4
+    },
+
+    // OFFICE
+    {
+      id: "p13", title: "Executive High-Back Genuine Leather Chair", titleUr: "ایگزیکٹو ہائی بیک لیدر کرسی",
+      price: 32000, oldPrice: 40000, category: "Office", categoryUr: "آفس", badge: "best", stock: "in",
+      desc: "Ergonomic executive chair with genuine breathable leather upholstery, adjustable lumbar support, and a heavy-duty hydraulic gas lift.",
+      descUr: "آرگونومک ایگزیکٹو کرسی، اصلی چمڑے اور مضبوط ہائیڈرولک گیس لفٹ کے ساتھ، دفتر میں لمبی ڈیوٹی کے لیے آرام دہ۔",
+      images: [
+        "https://images.unsplash.com/photo-1580480055273-228ff5388ef8?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1580480055273-228ff5388ef8?auto=format&fit=crop&w=1000&h=800&crop=top&q=80",
+        "https://images.unsplash.com/photo-1580480055273-228ff5388ef8?auto=format&fit=crop&w=1000&h=800&crop=bottom&q=80",
+        "https://images.unsplash.com/photo-1580480055273-228ff5388ef8?auto=format&fit=crop&w=1000&h=800&crop=left&q=80"
+      ],
+      wood: "Heavy Steel + Leather", dimensions: "Adjustable Height", warranty: "1 Year Replacement Warranty",
+      deliveryTime: "3-5 working days", emi: 2900, rating: 5
+    },
+    {
+      id: "p14", title: "Solid Sheesham Executive Boss Desk", titleUr: "شیشم ایگزیکٹو باس ڈیسک",
+      price: 88000, oldPrice: 110000, category: "Office", categoryUr: "آفس", badge: "new", stock: "in",
+      desc: "Prestigious boss desk built in solid Sheesham with cable management grommets, lockable drawer pedestal, and side credenza.",
+      descUr: "شیشم کی لکڑی سے تیار کردہ پروقار آفس ٹیبل بمعہ لاک والے دراز اور کیبل مینجمنٹ۔",
+      images: [
+        "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1000&h=800&crop=left&q=80",
+        "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1000&h=800&crop=right&q=80",
+        "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1000&h=800&crop=center&q=80"
+      ],
+      wood: "Solid Sheesham Wood", dimensions: "6ft x 3ft", warranty: "2 Years Warranty",
+      deliveryTime: "7-10 working days", emi: 7800, rating: 5
+    },
+    {
+      id: "p15", title: "Ergonomic Workstation Studio Chair", titleUr: "اسٹوڈیو ورک سٹیشن کرسی",
+      price: 24000, oldPrice: 30000, category: "Office", categoryUr: "آفس", badge: "", stock: "in",
+      desc: "Breathable mesh ergonomic chair with 3D armrests and multi-position tilt lock for home offices and freelance studios.",
+      descUr: "ہوم آفس اور ورک اسٹیشن کے لیے سانس لینے والی میش اور ایڈجسٹ ہونے والی کمر سپورٹ۔",
+      images: [
+        "https://images.unsplash.com/photo-1505797149-43b0069ec26b?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1505797149-43b0069ec26b?auto=format&fit=crop&w=1000&h=800&crop=top&q=80",
+        "https://images.unsplash.com/photo-1505797149-43b0069ec26b?auto=format&fit=crop&w=1000&h=800&crop=bottom&q=80",
+        "https://images.unsplash.com/photo-1505797149-43b0069ec26b?auto=format&fit=crop&w=1000&h=800&crop=center&q=80"
+      ],
+      wood: "Nylon Mesh + Steel Base", dimensions: "Standard Office Fit", warranty: "1 Year Warranty",
+      deliveryTime: "3-5 working days", emi: 2150, rating: 4
+    },
+    {
+      id: "p16", title: "Solid Wood Conference Table & Chairs Set", titleUr: "کانفرنس میٹنگ ٹیبل سیٹ",
+      price: 110000, oldPrice: 135000, category: "Office", categoryUr: "آفس", badge: "", stock: "made",
+      desc: "10-seater boardroom meeting table with durable polyurethane coat, bevelled edges, and center power sockets tray.",
+      descUr: "10 سیٹر کانفرنس ٹیبل میٹنگ رومز اور کمپنیوں کے لیے، ٹھوس لکڑی اور شاندار فنش۔",
+      images: [
+        "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1000&h=800&crop=left&q=80",
+        "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1000&h=800&crop=right&q=80",
+        "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1000&h=800&crop=center&q=80"
+      ],
+      wood: "Solid Sheesham & Ash", dimensions: "8ft x 4ft", warranty: "3 Years Warranty",
+      deliveryTime: "12-16 working days", emi: 9800, rating: 5
+    },
+
+    // WARDROBE
+    {
+      id: "p17", title: "6-Door Solid Wooden Master Wardrobe", titleUr: "6 دروازوں والی شیشم الماری",
+      price: 165000, oldPrice: 195000, category: "Wardrobe", categoryUr: "الماری", badge: "best", stock: "made",
+      desc: "Spacious 6-door wardrobe with full-length mirror, heavy internal drawers, and dual hanging rails. Made to order in natural or walnut polish.",
+      descUr: "کشادہ 6 دروازوں والی شیشم کی الماری، آئینے، اندرونی درازوں اور مضبوط ریل کے ساتھ۔",
+      images: [
+        "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1000&h=800&crop=left&q=80",
+        "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1000&h=800&crop=right&q=80",
+        "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1000&h=800&crop=center&q=80"
+      ],
+      wood: "Sheesham / Ash Wood", dimensions: "8ft x 7ft x 2ft", warranty: "3 Years Warranty",
       deliveryTime: "15-20 working days", emi: 14700, rating: 5
     },
     {
-      id: "p6", title: "Solid Wood Coffee Table", titleUr: "لکڑی کا کافی ٹیبل",
-      price: 28000, oldPrice: 35000, category: "Tables", categoryUr: "ٹیبل", badge: "", stock: "in",
-      desc: "Minimalist coffee table carved from a single slab of Sheesham, finished with natural oil. Each piece has unique grain patterns — no two are alike.",
-      descUr: "شیشم کی ایک ہی سلیب سے تراشا گیا سادہ کافی ٹیبل، قدرتی تیل سے فنش۔ ہر پیس کا گریں منفرد ہے۔",
+      id: "p18", title: "4-Door Sliding Mirror Polish Wardrobe", titleUr: "4 دروازوں والی سلائیڈنگ الماری",
+      price: 140000, oldPrice: 165000, category: "Wardrobe", categoryUr: "الماری", badge: "new", stock: "in",
+      desc: "Smooth gliding 4-door wardrobe with high-clarity mirror panels. Saves floor space while giving maximum vertical storage.",
+      descUr: "سلائیڈنگ دروازوں اور بڑے آئینوں کے ساتھ جدید الماری جو کم جگہ میں زیادہ سامان سنبھالتی ہے۔",
       images: [
-        "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=800&q=70",
-        "https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=800&q=70"
+        "https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&w=1000&h=800&crop=left&q=80",
+        "https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&w=1000&h=800&crop=right&q=80",
+        "https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&w=1000&h=800&crop=center&q=80"
+      ],
+      wood: "Solid Seasoned Sheesham", dimensions: "6.5ft x 7ft x 2ft", warranty: "2 Years Warranty",
+      deliveryTime: "10-14 working days", emi: 12500, rating: 5
+    },
+    {
+      id: "p19", title: "Luxury Walk-in Wood Closet Organizer", titleUr: "واک اِن کلوست آرگنائزر",
+      price: 155000, oldPrice: 180000, category: "Wardrobe", categoryUr: "الماری", badge: "", stock: "made",
+      desc: "Open modular walk-in system with shoe racks, suit organizers, and velvety drawer partitions custom sized for your dressing area.",
+      descUr: "ڈریسنگ ایریا کے لیے ماڈیولر اوپن وارڈروب سسٹم، جوتوں اور سوٹوں کے لیے خصوصی خانے۔",
+      images: [
+        "https://images.unsplash.com/photo-1558997519-83ea9252def8?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1558997519-83ea9252def8?auto=format&fit=crop&w=1000&h=800&crop=left&q=80",
+        "https://images.unsplash.com/photo-1558997519-83ea9252def8?auto=format&fit=crop&w=1000&h=800&crop=right&q=80",
+        "https://images.unsplash.com/photo-1558997519-83ea9252def8?auto=format&fit=crop&w=1000&h=800&crop=center&q=80"
+      ],
+      wood: "Solid Sheesham & Ash", dimensions: "Custom Built to Fit", warranty: "3 Years Warranty",
+      deliveryTime: "15-20 working days", emi: 13800, rating: 4
+    },
+    {
+      id: "p20", title: "Traditional Sheesham 3-Door Almari with Drawers", titleUr: "روایتی 3 دروازوں والی الماری",
+      price: 115000, oldPrice: 135000, category: "Wardrobe", categoryUr: "الماری", badge: "", stock: "in",
+      desc: "Traditional handcrafted Sheesham armoire with deep bottom storage drawers and brass vintage handles.",
+      descUr: "روایتی شیشم کی الماری، مضبوط اندرونی لکڑی اور پیتل کے ہینڈلز کے ساتھ۔",
+      images: [
+        "https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=1000&h=800&crop=left&q=80",
+        "https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=1000&h=800&crop=right&q=80",
+        "https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=1000&h=800&crop=center&q=80"
+      ],
+      wood: "100% Solid Sheesham", dimensions: "5ft x 6.5ft x 1.8ft", warranty: "2 Years Warranty",
+      deliveryTime: "8-12 working days", emi: 10200, rating: 5
+    },
+
+    // TABLES
+    {
+      id: "p21", title: "Live-Edge Solid Sheesham Coffee Table", titleUr: "لائیو ایج شیشم کافی ٹیبل",
+      price: 28000, oldPrice: 35000, category: "Tables", categoryUr: "ٹیبل", badge: "best", stock: "in",
+      desc: "Minimalist live-edge coffee table carved from a single dense slab of Sheesham, sealed with natural linseed oil. Every piece has a unique organic edge.",
+      descUr: "شیشم کی قدرتی سلیب سے بنا خوبصورت کافی ٹیبل، جس پر لکڑی کے قدرتی نقوش جگمگاتے ہیں۔",
+      images: [
+        "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=1000&h=800&crop=left&q=80",
+        "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=1000&h=800&crop=right&q=80",
+        "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=1000&h=800&crop=center&q=80"
       ],
       wood: "Solid Sheesham Wood", dimensions: "4ft x 2ft x 1.5ft", warranty: "1 Year Warranty",
-      deliveryTime: "5-7 working days", emi: 2500, rating: 4
+      deliveryTime: "4-6 working days", emi: 2500, rating: 5
+    },
+    {
+      id: "p22", title: "Modern Round Nesting Coffee Tables (Set of 2)", titleUr: "راؤنڈ نیسٹنگ کافی ٹیبل (سیٹ 2)",
+      price: 34000, oldPrice: 42000, category: "Tables", categoryUr: "ٹیبل", badge: "new", stock: "in",
+      desc: "Space-saving nesting duo table with dark wood top and golden champagne metal frame. Use together or separate across seating areas.",
+      descUr: "دو گول نیسٹنگ ٹیبلز کا پرکشش سیٹ، لاؤنج کے لیے سمارٹ اور خوبصورت حل۔",
+      images: [
+        "https://images.unsplash.com/photo-1532372320572-cda25653a26d?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1532372320572-cda25653a26d?auto=format&fit=crop&w=1000&h=800&crop=left&q=80",
+        "https://images.unsplash.com/photo-1532372320572-cda25653a26d?auto=format&fit=crop&w=1000&h=800&crop=right&q=80",
+        "https://images.unsplash.com/photo-1532372320572-cda25653a26d?auto=format&fit=crop&w=1000&h=800&crop=center&q=80"
+      ],
+      wood: "Sheesham Top + Steel Accent", dimensions: "28in & 20in Diameter", warranty: "1 Year Warranty",
+      deliveryTime: "4-7 working days", emi: 3000, rating: 5
+    },
+    {
+      id: "p23", title: "Luxury Hallway Console Table", titleUr: "لگژری ہال وے کنسول ٹیبل",
+      price: 38000, oldPrice: 45000, category: "Tables", categoryUr: "ٹیبل", badge: "", stock: "in",
+      desc: "Slender entrance console table with geometric wood carving and lower display shelf. Ideal for flower vases, keys and mirrors.",
+      descUr: "گھر کے داخلی راستے اور ہال وے کے لیے شاندار کندہ کاری والا کنسول ٹیبل۔",
+      images: [
+        "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1000&h=800&crop=left&q=80",
+        "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1000&h=800&crop=right&q=80",
+        "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1000&h=800&crop=center&q=80"
+      ],
+      wood: "Solid Sheesham Wood", dimensions: "4ft x 14in x 32in", warranty: "1 Year Warranty",
+      deliveryTime: "5-8 working days", emi: 3400, rating: 4
+    },
+    {
+      id: "p24", title: "Solid Sheesham Side Table with Drawer", titleUr: "شیشم سائیڈ ٹیبل بمعہ دراز",
+      price: 19000, oldPrice: 24000, category: "Tables", categoryUr: "ٹیبل", badge: "", stock: "in",
+      desc: "Compact bedside or sofa end table with a smooth gliding drawer and open bottom rack for magazines or books.",
+      descUr: "صوفے اور بیڈ کے ساتھ رکھنے کے لیے کارآمد سائیڈ ٹیبل بمعہ دراز۔",
+      images: [
+        "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=1000&h=800&crop=left&q=80",
+        "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=1000&h=800&crop=right&q=80",
+        "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=1000&h=800&crop=center&q=80"
+      ],
+      wood: "Solid Sheesham Wood", dimensions: "18in x 18in x 22in", warranty: "1 Year Warranty",
+      deliveryTime: "3-5 working days", emi: 1700, rating: 5
     }
   ],
   reviews: [
-    { id: "r1", name: "Ahmed Raza", rating: 5, text: "Ordered the 7-seater sofa. The woodwork is absolutely superb — exactly like the showroom photos. Delivery was on time and the team assembled everything.", photo: "", date: "2024-11-12", approved: true, verified: true },
-    { id: "r2", name: "Fatima Khan", rating: 5, text: "The king size bed is stunning. Solid wood, no creaking at all. Ali bhai personally followed up on the polish shade. Highly recommended.", photo: "", date: "2024-10-28", approved: true, verified: true },
-    { id: "r3", name: "Bilal Ahmed", rating: 4, text: "Great quality dining table for the price. Took a few days extra but the finish is worth the wait.", photo: "", date: "2024-09-15", approved: true, verified: true }
+    { id: "r1", name: "Chaudhry Tariq (Jhang)", rating: 5, text: "Malik Irfan bhai se 7-seater sofa set banwaya tha. Woodwork aur velvet finish 100% showroom se bhi behtareen hai. Bohat shukriya!", photo: "", date: "2024-11-12", approved: true, verified: true },
+    { id: "r2", name: "Zahid Mehmood (Faisalabad)", rating: 5, text: "King size sheesham bed aur dressing table order kiya tha. Packing aur safe delivery zabardast thi. Solid wood hai bilkul awaaz nahi karti.", photo: "", date: "2024-10-28", approved: true, verified: true },
+    { id: "r3", name: "Dr. Asim Raza (Lahore)", rating: 5, text: "Ali Furniture & Decor Point ka dining table set kamal hai. Niazi Chowk Jhang se Lahore safe deliver hua. Easy Exchange Policy aur service bohot achi hai.", photo: "", date: "2024-09-15", approved: true, verified: true }
   ],
   orders: [],
   analytics: { waClicks: 0, cartAdds: 0 }
@@ -963,19 +1360,19 @@ const I18N = {
     stat_homes:"مطمئن گھر", stat_years:"سال کا تجربہ", stat_products:"ڈیزائن",
     f1_t:"مفت ڈیلیوری", f1_s:"50,000 سے زائد آرڈرز پر",
     f2_t:"کیش آن ڈیلیوری", f2_s:"وصولی پر ادائیگی",
-    f3_t:"7 دن واپسی", f3_s:"آسان ایکسچینج پالیسی",
+    f3_t:"آسان ایکسچینج پالیسی", f3_s:"بغیر پریشانی کے تبادلہ",
     f4_t:"پریمیم کوالٹی", f4_s:"خالص شیشم کی لکڑی",
     our_collection:"ہماری کلیکشن", shop_title:"ہر کمرے کے لیے تیار",
     shop_sub:"ہمارا ہاتھ سے بنا فرنیچر دیکھیں — ماہر کاریگروں کی تیاری، آپ کے دروازے تک۔",
     search_ph:"پروڈکٹ تلاش کریں...", sort_new:"نئے پہلے", sort_low:"قیمت: کم سے زیادہ", sort_high:"قیمت: زیادہ سے کم", sort_pop:"مقبول ترین",
     all:"سب", no_products:"کوئی پروڈکٹ نہیں ملی۔ دوسری تلاش کریں۔",
     add_cart:"کارٹ میں ڈالیں", in_stock:"اسٹاک میں", made_order:"آرڈر پر تیار", sold_out:"فروخت شدہ",
-    recently_viewed:"حال ہی میں دیکھا گیا", fresh:"ورکشاپ سے نیا", new_arrivals:"نئی آمد",
-    our_story:"ہماری کہانی", about_title:"لکڑی کے کام کی تین نسلیں",
-    about_p1:"علی فرنیچر کا آغاز 2009 میں لاہور کی ایک چھوٹی فیملی ورکشاپ سے ہوا۔ آج ہم ایک مکمل شوروم اور مینوفیکچرنگ یونٹ ہیں — لیکن ہر پیس آج بھی اسی طرح بنتا ہے: ہاتھ سے، ان کاریگروں کے ہاتھ سے جنہوں نے زندگی لکڑی کے ساتھ گزاری ہے۔",
-    about_p2:"ہم خالص شیشم اور اش لکڑی استعمال کرتے ہیں، اسے صحیح طریقے سے خشک کرتے ہیں اور ہاتھ سے تیل لگا کر فنش کرتے ہیں۔ کوئی پارٹیکل بورڈ نہیں، کوئی شارٹ کٹ نہیں۔ صرف وہ فرنیچر جو نسلوں تک رہے۔",
+    recently_viewed:"حال ہی میں دیکھا گیا", fresh:"جھنگ صدر سے نیا شوکیس", new_arrivals:"نئی آمد",
+    our_story:"ہماری کہانی", about_title:"ملک عرفان کی زیر نگرانی کاریگری",
+    about_p1:"علی فرنیچر اینڈ ڈیکور پوائنٹ فاروق اعظم روڈ، نزد نیازی چوک، جھنگ صدر میں پریمیم فرنیچر کا بااعتماد نام ہے۔ ملک عرفان کی قیادت میں ہمارے ماہر کاریگر ہر پیس خالص شیشم سے تیار کرتے ہیں۔",
+    about_p2:"ہم خالص شیشم اور اش لکڑی استعمال کرتے ہیں، اسے صحیح طریقے سے خشک کرتے ہیں اور جدید پالش سے مزین کرتے ہیں۔ آسان ایکسچینج پالیسی اور پورے پاکستان میں ڈیلیوری دستیاب ہے۔",
     visit_showroom:"ہمارا شوروم دیکھیں",
-    real_photos:"اصلی تصاویر، اصلی ورکشاپ", gallery_title:"ہمارے شوروم کے اندر", gallery_sub:"کوئی اسٹاک فوٹو نہیں — یہیں آپ کا فرنیچر بنتا ہے۔",
+    real_photos:"اصلی تصاویر، اصلی ورکشاپ", gallery_title:"ہمارے شوروم کے اندر", gallery_sub:"کوئی فیک فوٹو نہیں — یہیں آپ کا فرنیچر تیار ہوتا ہے۔",
     watch_video:"ورکشاپ ویڈیو دیکھیں",
     testimonials:"گاہکوں کی رائے", reviews_title:"ہمارے گاہک کیا کہتے ہیں", reviews_word:"ریویوز",
     write_review:"ریویو لکھیں", review_note:"آپ کا ریویو منظوری کے بعد شائع ہوگا۔",
@@ -984,9 +1381,9 @@ const I18N = {
     verified_buyer:"تصدیق شدہ خریدار",
     get_in_touch:"رابطہ کریں", contact_title:"ہمارا شوروم تشریف لائیں", send_wa:"واٹس ایپ پر بھیجیں",
     faq_label:"سوالات", faq_title:"اکثر پوچھے گئے سوالات",
-    footer_about:"لاہور سے پریمیم ہاتھ سے بنا فرنیچر۔ خالص شیشم کی لکڑی، آرڈر پر تیاری، پورے پاکستان میں ڈیلیوری۔",
+    footer_about:"جھنگ صدر سے پریمیم ہاتھ سے بنا فرنیچر۔ ملک عرفان۔ خالص شیشم کی لکڑی، آرڈر پر تیاری، پورے پاکستان میں ڈیلیوری۔",
     quick_links:"فوری لنکس", policies:"پالیسیاں", contact_us:"رابطہ",
-    privacy:"پرائیویسی پالیسی", terms:"شرائط و ضوابط", returns:"واپسی و ایکسچینج پالیسی", delivery_policy:"ڈیلیوری پالیسی",
+    privacy:"پرائیویسی پالیسی", terms:"شرائط و ضوابط", returns:"آسان ایکسچینج پالیسی", delivery_policy:"ڈیلیوری پالیسی",
     scan_qr:"موبائل پر سائٹ کھولنے کے لیے اسکین کریں", rights:"جملہ حقوق محفوظ ہیں۔", powered:"تیار کردہ",
     admin_login:"ایڈمن لاگ ان", admin_login_sub:"اسٹور سنبھالنے کے لیے پاس ورڈ درج کریں", ph_password:"پاس ورڈ", login:"لاگ ان", cancel:"منسوخ",
     your_cart:"آپ کا کارٹ", your_wishlist:"آپ کی پسندیدہ فہرست", empty_cart:"آپ کا کارٹ خالی ہے", empty_wish:"آپ کی پسندیدہ فہرست خالی ہے",
@@ -1001,7 +1398,7 @@ const I18N = {
 };
 
 /* ---------- State ---------- */
-const KEY = "ali_furniture_db_v1";
+const KEY = "ali_furniture_db_v2";
 let db = clone(DEFAULTS);
 const state = {
   lang: localStorage.getItem("ali_lang") || "en",
@@ -1085,48 +1482,69 @@ function renderTopBar(){
   $("#marqueeTrack").innerHTML = half + half;
 }
 
+/* ---------- BRAND LOGO & SUBTITLE ---------- */
+function renderLogo(){
+  const s = db.settings;
+  const logoHtml = s.logoUrl 
+    ? `<img src="${esc(s.logoUrl)}" alt="${esc(s.brand)}" class="h-10 sm:h-11 w-auto object-contain rounded-lg">`
+    : `<div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl grid place-items-center font-display font-bold text-lg shadow-md transition group-hover:scale-105 shrink-0" style="background:linear-gradient(135deg,#b08d57,#e5c483);color:#1a1614;box-shadow:0 4px 14px rgba(176,141,87,.35)">
+        <span class="text-sm font-bold tracking-tighter">AF</span>
+       </div>`;
+  const textHtml = `
+    <div class="flex flex-col leading-tight">
+      <span class="font-display text-[17px] sm:text-xl font-bold tracking-tight group-hover:text-[var(--gold)] transition">Ali <span class="gold">Furniture</span></span>
+      <span class="text-[9px] sm:text-[10px] tracking-[0.22em] uppercase font-semibold text-[var(--gold)] -mt-0.5">and decor point</span>
+    </div>`;
+  const navEl = $("#navBrand");
+  if (navEl) navEl.innerHTML = logoHtml + textHtml;
+  const footEl = $("#footBrand");
+  if (footEl) footEl.innerHTML = logoHtml + textHtml;
+}
+
 /* ---------- HERO ---------- */
 function renderHero(){
   const s = db.settings;
   const isUr = state.lang === "ur";
-  $("#heroTitle").textContent = isUr && s.heroTitleUr ? s.heroTitleUr : s.heroTitle;
-  $("#heroSub").textContent = isUr && s.heroSubUr ? s.heroSubUr : s.heroSub;
-  $("#heroImg").src = s.heroImage || DEFAULTS.settings.heroImage;
-  const wa = `https://wa.me/${s.whatsapp}?text=${encodeURIComponent("Assalam o Alaikum! I want to know more about your furniture.")}`;
-  $("#heroWa").href = wa;
-  $("#waFloat").href = wa;
-  $("#contactWa").href = wa;
-  $("#waText").textContent = s.phone;
-  $("#contactPhone").href = "tel:" + s.phone.replace(/\s/g,"");
-  $("#phoneText").textContent = s.phone;
-  $("#contactEmail").href = "mailto:" + s.email;
-  $("#emailText").textContent = s.email;
-  $("#addrText").textContent = s.address;
-  $("#mapFrame").src = s.mapEmbed;
-  $("#videoLink").href = s.videoUrl || "#";
+  if ($("#heroTitle")) $("#heroTitle").textContent = isUr && s.heroTitleUr ? s.heroTitleUr : s.heroTitle;
+  if ($("#heroSub")) $("#heroSub").textContent = isUr && s.heroSubUr ? s.heroSubUr : s.heroSub;
+  if ($("#heroImg")) $("#heroImg").src = s.heroImage || DEFAULTS.settings.heroImage;
+  const wa = `https://wa.me/${s.whatsapp}?text=${encodeURIComponent("Assalam o Alaikum! I want to know more about Ali Furniture & Decor Point.")}`;
+  if ($("#heroWa")) $("#heroWa").href = wa;
+  if ($("#waFloat")) $("#waFloat").href = wa;
+  if ($("#contactWa")) $("#contactWa").href = wa;
+  if ($("#phoneText")) $("#phoneText").textContent = s.phone + (s.phone2 ? " / " + s.phone2 : "");
+  if ($("#contactPhone")) $("#contactPhone").href = "tel:" + s.phone.replace(/\D/g,"");
+  if ($("#contactEmail")) $("#contactEmail").href = "mailto:" + s.email;
+  if ($("#emailText")) $("#emailText").textContent = s.email;
+  if ($("#addrText")) $("#addrText").textContent = s.address;
+  if ($("#mapFrame")) $("#mapFrame").src = s.mapEmbed;
+  if ($("#videoLink")) $("#videoLink").href = s.videoUrl || "#";
 }
 
 /* ---------- FOOTER INFO ---------- */
 function renderFooterInfo(){
   const s = db.settings;
-  $("#footAddr").textContent = s.address;
-  $("#footPhone").textContent = s.phone;
-  $("#footEmail").textContent = s.email;
+  if ($("#footAddr")) $("#footAddr").textContent = s.address;
+  if ($("#footPhone")) $("#footPhone").textContent = s.phone + (s.phone2 ? " / " + s.phone2 : "");
+  if ($("#footEmail")) $("#footEmail").textContent = s.email;
   const socials = [
     { url: s.facebook, icon: "fa-facebook-f" },
     { url: s.instagram, icon: "fa-instagram" },
-    { url: s.tiktok, icon: "fa-tiktok" },
-    { url: s.youtube, icon: "fa-youtube" }
+    { url: s.twitter, icon: "fa-x-twitter" },
+    { url: s.youtube, icon: "fa-youtube" },
+    { url: s.tiktok, icon: "fa-tiktok" }
   ].filter(x => x.url);
-  $("#socialIcons").innerHTML = socials.map(x =>
-    `<a href="${esc(x.url)}" target="_blank" rel="noopener" class="w-9 h-9 rounded-lg grid place-items-center transition hover:scale-110" style="background:var(--card);border:1px solid var(--border);color:var(--gold)"><i class="fa-brands ${x.icon} text-sm"></i></a>`
-  ).join("");
+  if ($("#socialIcons")) {
+    $("#socialIcons").innerHTML = socials.map(x =>
+      `<a href="${esc(x.url)}" target="_blank" rel="noopener" class="w-9 h-9 rounded-lg grid place-items-center transition hover:scale-110" style="background:var(--card);border:1px solid var(--border);color:var(--gold)"><i class="fa-brands ${x.icon} text-sm"></i></a>`
+    ).join("");
+  }
 
   const url = location.origin + location.pathname;
   const qrSrc = "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=" + encodeURIComponent(url);
-  $("#qrImg").src = qrSrc;
-  $("#adminQr").src = qrSrc;
-  $("#qrUrlText").textContent = url;
+  if ($("#qrImg")) $("#qrImg").src = qrSrc;
+  if ($("#adminQr")) $("#adminQr").src = qrSrc;
+  if ($("#qrUrlText")) $("#qrUrlText").textContent = url;
 }
 
 /* ---------- GALLERY ---------- */
@@ -1242,21 +1660,32 @@ function renderRecent(){
   }).join("");
 }
 
-/* ---------- NEW ARRIVALS MARQUEE ---------- */
+/* ---------- DOUBLE LINE SHOWCASE MARQUEE ---------- */
 function renderArrivals(){
-  let list = db.products.filter(p => p.badge === "new" || p.badge === "best").slice(0,8);
-  if (!list.length) list = db.products.slice(0,6);
-  const half = list.map(p => {
+  const p1 = db.products.slice(0, 12);
+  const p2 = db.products.slice(12, 24);
+  const makeCards = list => list.map(p => {
     const title = (state.lang==="ur"&&p.titleUr)?p.titleUr:p.title;
-    return `<div class="shrink-0 w-40 sm:w-56 me-4 cursor-pointer group" data-quick="${p.id}">
+    return `<div class="shrink-0 w-44 sm:w-60 me-4 cursor-pointer group" data-quick="${p.id}">
       <div class="rounded-xl overflow-hidden aspect-[4/3] bg-[var(--alt)] border" style="border-color:var(--border)">
         <img src="${esc(p.images[0]||PH)}" alt="${esc(title)}" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" loading="lazy" onerror="imgFail(this)">
       </div>
-      <p class="text-[11px] font-semibold mt-2 line-clamp-1">${esc(title)}</p>
-      <p class="text-[11px] gold font-bold">${fmt(p.price)}</p>
+      <p class="text-[12px] font-semibold mt-2 line-clamp-1">${esc(title)}</p>
+      <div class="flex items-center justify-between mt-0.5">
+        <p class="text-[11px] gold font-bold">${fmt(p.price)}</p>
+        <span class="text-[9px] muted uppercase font-medium">${esc(p.category)}</span>
+      </div>
     </div>`;
   }).join("");
-  $("#arrivalsTrack").innerHTML = half + half;
+
+  if ($("#arrivalsTrack1")) {
+    const half1 = makeCards(p1.length ? p1 : db.products);
+    $("#arrivalsTrack1").innerHTML = half1 + half1;
+  }
+  if ($("#arrivalsTrack2")) {
+    const half2 = makeCards(p2.length ? p2 : db.products);
+    $("#arrivalsTrack2").innerHTML = half2 + half2;
+  }
 }
 
 /* ---------- QUICK VIEW ---------- */
@@ -1524,28 +1953,32 @@ function renderWishlist(){
 function renderReviews(){
   const approved = db.reviews.filter(r => r.approved);
   const avg = approved.length ? (approved.reduce((s,r)=>s+r.rating,0)/approved.length) : 0;
-  $("#avgRating").textContent = avg.toFixed(1);
-  $("#reviewCount").textContent = approved.length;
-  $("#starsBox").innerHTML = [1,2,3,4,5].map(n =>
-    `<i class="fa-${n <= Math.round(avg) ? 'solid' : 'regular'} fa-star star text-sm"></i>`
-  ).join("");
+  if ($("#avgRating")) $("#avgRating").textContent = avg.toFixed(1);
+  if ($("#reviewCount")) $("#reviewCount").textContent = approved.length;
+  if ($("#starsBox")) {
+    $("#starsBox").innerHTML = [1,2,3,4,5].map(n =>
+      `<i class="fa-${n <= Math.round(avg) ? 'solid' : 'regular'} fa-star star text-sm"></i>`
+    ).join("");
+  }
 
-  $("#reviewList").innerHTML = approved.slice(0,9).map(r => `
-    <div class="card p-4 reveal">
-      <div class="flex items-center gap-3 mb-2">
-        <div class="w-10 h-10 rounded-full grid place-items-center font-bold text-sm shrink-0" style="background:rgba(176,141,87,.15);color:var(--gold)">${esc((r.name||"C")[0].toUpperCase())}</div>
-        <div class="min-w-0">
-          <p class="text-sm font-semibold truncate">${esc(r.name)}</p>
-          <div class="flex items-center gap-1.5">
-            <div class="flex gap-0.5 text-[10px]">${'<i class="fa-solid fa-star star"></i>'.repeat(r.rating)}${'<i class="fa-regular fa-star star"></i>'.repeat(5-r.rating)}</div>
-            ${r.verified?`<span class="text-[9px] px-1.5 py-0.5 rounded" style="background:rgba(46,160,67,.14);color:#2ea043"><i class="fa-solid fa-circle-check"></i> ${t('verified_buyer')}</span>`:""}
+  if ($("#reviewList")) {
+    $("#reviewList").innerHTML = approved.slice(0,9).map(r => `
+      <div class="card p-4 reveal">
+        <div class="flex items-center gap-3 mb-2">
+          <div class="w-10 h-10 rounded-full grid place-items-center font-bold text-sm shrink-0" style="background:rgba(176,141,87,.15);color:var(--gold)">${esc((r.name||"C")[0].toUpperCase())}</div>
+          <div class="min-w-0">
+            <p class="text-sm font-semibold truncate">${esc(r.name)}</p>
+            <div class="flex items-center gap-1.5">
+              <div class="flex gap-0.5 text-[10px]">${'<i class="fa-solid fa-star star"></i>'.repeat(r.rating)}${'<i class="fa-regular fa-star star"></i>'.repeat(5-r.rating)}</div>
+              ${r.verified?`<span class="text-[9px] px-1.5 py-0.5 rounded" style="background:rgba(46,160,67,.14);color:#2ea043"><i class="fa-solid fa-circle-check"></i> ${t('verified_buyer')}</span>`:""}
+            </div>
           </div>
         </div>
-      </div>
-      <p class="text-xs muted leading-relaxed">${esc(r.text)}</p>
-      ${r.photo?`<img src="${esc(r.photo)}" class="w-full h-32 object-cover rounded-lg mt-3" loading="lazy" onerror="imgFail(this)">`:""}
-      <p class="text-[10px] muted mt-2">${esc(r.date||"")}</p>
-    </div>`).join("");
+        <p class="text-xs muted leading-relaxed">${esc(r.text)}</p>
+        ${r.photo?`<img src="${esc(r.photo)}" class="w-full h-32 object-cover rounded-lg mt-3" loading="lazy" onerror="imgFail(this)">`:""}
+        <p class="text-[10px] muted mt-2">${esc(r.date||"")}</p>
+      </div>`).join("");
+  }
   observeReveal();
 }
 function submitReview(e){
@@ -1604,19 +2037,19 @@ function renderFAQ(){
 const POLICIES = {
   privacy: {
     title: "Privacy Policy",
-    body: `<p>Ali Furniture respects your privacy. This website stores all data (cart, wishlist, reviews) locally in your own browser using localStorage. We do not send your personal information to any third-party server.</p><p>When you click "Checkout on WhatsApp", your order details are sent to our WhatsApp business number so we can process your order.</p><p>We may use Google Analytics to understand anonymous traffic patterns. No personally identifiable information is collected.</p>`
+    body: `<p>Ali Furniture &amp; Decor Point respects your privacy. This website stores all data (cart, wishlist, reviews) locally in your own browser using localStorage. We do not send your personal information to any unauthorized third-party server.</p><p>When you click "Checkout on WhatsApp", your order details are sent to Malik Irfan via WhatsApp so we can process your order smoothly.</p>`
   },
   terms: {
     title: "Terms & Conditions",
-    body: `<p>By using this website you agree to the following: All prices are in Pakistani Rupees (PKR) and may change without notice. Product images are representative — natural wood grain and polish shades may vary slightly from photographs.</p><p>Orders placed via WhatsApp are confirmed only after our team replies and, where applicable, an advance payment is received.</p><p>Ali Furniture reserves the right to cancel any order in case of pricing errors or stock unavailability.</p>`
+    body: `<p>By using this website you agree to the following: All prices are in Pakistani Rupees (PKR) and may change without prior notice. Natural wood grain and polish shades may exhibit authentic handcrafted variations.</p><p>Orders placed via WhatsApp are confirmed after our team responds and specifications are finalized.</p>`
   },
   returns: {
-    title: "Return & Exchange Policy",
-    body: `<p>Standard (non-custom) items can be returned or exchanged within <b>7 days</b> of delivery, provided the item is unused, undamaged and in its original condition.</p><p>Custom made-to-order pieces are <b>non-returnable</b> unless there is a manufacturing defect.</p><p>To start a return, contact us on WhatsApp with your order details and photos. Return shipping is the customer's responsibility unless the item is defective.</p>`
+    title: "Easy Exchange Policy",
+    body: `<p>Ali Furniture &amp; Decor Point offers a customer-friendly <b>Easy Exchange Policy</b> across Pakistan.</p><p>If you wish to exchange an item for a different size, polish shade, fabric, or model, simply get in touch with Malik Irfan on WhatsApp (0313-7015255 / 0348-1298093).</p><p>The furniture piece must be unused, undamaged, and kept in its original condition. We arrange a smooth and hassle-free replacement for your complete satisfaction.</p>`
   },
   delivery: {
     title: "Delivery Policy",
-    body: `<p>We deliver to all major cities across Pakistan. Delivery time and charges are shown in the cart after you select your city.</p><p>Lahore delivery is usually free. For other cities, charges start from Rs 1,500 depending on distance and item size.</p><p>Someone must be available at the delivery address to receive and inspect the furniture. Please check for damage before signing the delivery receipt.</p>`
+    body: `<p>We deliver to all cities across Pakistan through insured logistics. Delivery time and charges are shown in the cart after you select your city.</p><p>Please inspect the furniture upon arrival before signing the delivery receipt.</p>`
   }
 };
 function openPolicy(key){
@@ -1627,20 +2060,57 @@ function openPolicy(key){
   openModal("policyModal");
 }
 
-/* ---------- ANNOUNCEMENT POPUP ---------- */
+/* ---------- ANNOUNCEMENT / OFFER POPUP (EVERY VISIT) ---------- */
 function maybeShowPopup(){
   const s = db.settings.popup;
   if (!s || !s.enabled) return;
-  if (localStorage.getItem("ali_popup_seen") === "1") return;
+  // Delay slightly so first-time install prompt displays first
+  const delay = localStorage.getItem("ali_install_prompted") ? 2000 : 7000;
   setTimeout(() => {
-    $("#popupTitle").textContent = s.title;
-    $("#popupText").textContent = s.text;
-    openModal("popupModal");
-  }, 2600);
+    if (!$("#installAppModal") || !$("#installAppModal").classList.contains("open")) {
+      $("#popupTitle").textContent = s.title || "Special Offer";
+      $("#popupText").textContent = s.text || "Ali Furniture & Decor Point ki taraf se khas discount!";
+      openModal("popupModal");
+    }
+  }, delay);
 }
 function closePopup(){
-  localStorage.setItem("ali_popup_seen", "1");
   closeModal("popupModal");
+}
+
+/* ---------- PWA INSTALL ON PHONE (FIRST VISIT POPUP) ---------- */
+let deferredPrompt = null;
+window.addEventListener("beforeinstallprompt", e => {
+  e.preventDefault();
+  deferredPrompt = e;
+  if ($("#installBtn")) $("#installBtn").classList.remove("hidden");
+});
+
+function checkFirstVisitInstallPrompt(){
+  if (!localStorage.getItem("ali_install_prompted")) {
+    setTimeout(() => {
+      openModal("installAppModal");
+      localStorage.setItem("ali_install_prompted", "1");
+    }, 1200);
+  }
+}
+
+async function triggerPwaInstall(){
+  if (deferredPrompt) {
+    deferredPrompt.prompt();
+    const { outcome } = await deferredPrompt.userChoice;
+    deferredPrompt = null;
+    closeModal("installAppModal");
+    if (outcome === "accepted") toast("App install ho rahi hai!");
+  } else {
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    if (isIOS) {
+      alert("iPhone par install karne ke liye: Safari ke bottom 'Share' button par click karein aur 'Add to Home Screen' select karein.");
+    } else {
+      toast("Browser ke menu (3 dots) par click karke 'Add to Home Screen' ya 'Install' dabayein.");
+    }
+    closeModal("installAppModal");
+  }
 }
 
 /* ---------- SALE COUNTDOWN ---------- */
@@ -1932,18 +2402,32 @@ function compressImage(file, maxW, quality){
   });
 }
 
+// Admin Logo upload handler
+$("#s_logoFile") && $("#s_logoFile").addEventListener("change", async e => {
+  const file = (e.target.files || [])[0];
+  if (!file) return;
+  try {
+    toast("Processing logo...");
+    const base64 = await compressImage(file, 400, 0.85);
+    $("#s_logoUrl").value = base64;
+    toast("Logo ready! Click 'Save All Settings'.");
+  } catch(err){ toast("Error processing logo"); }
+});
+
 /* ---------- ADMIN: SETTINGS ---------- */
 function fillSettings(){
   const s = db.settings;
   const set = (id, v) => { const el = $("#"+id); if (el) el.value = v == null ? "" : v; };
+  set("s_logoUrl", s.logoUrl || "");
+  set("s_owner", s.owner || "");
   set("s_topBar", s.topBar); set("s_topBarUr", s.topBarUr);
   set("s_heroTitle", s.heroTitle); set("s_heroTitleUr", s.heroTitleUr);
   set("s_heroSub", s.heroSub); set("s_heroSubUr", s.heroSubUr);
   set("s_heroImage", s.heroImage);
-  set("s_whatsapp", s.whatsapp); set("s_phone", s.phone); set("s_email", s.email);
+  set("s_whatsapp", s.whatsapp); set("s_phone", s.phone); set("s_phone2", s.phone2 || ""); set("s_email", s.email);
   set("s_address", s.address); set("s_mapEmbed", s.mapEmbed);
   set("s_facebook", s.facebook); set("s_instagram", s.instagram);
-  set("s_tiktok", s.tiktok); set("s_youtube", s.youtube);
+  set("s_twitter", s.twitter || ""); set("s_tiktok", s.tiktok); set("s_youtube", s.youtube);
   set("s_videoUrl", s.videoUrl);
   set("s_showroom", (s.showroom||[]).join(", "));
   $("#s_saleMode").checked = !!s.saleMode;
@@ -1958,14 +2442,17 @@ function fillSettings(){
 function saveSettings(){
   const s = db.settings;
   const v = id => { const el = $("#"+id); return el ? el.value : ""; };
+  s.logoUrl = v("s_logoUrl").trim();
+  s.owner = v("s_owner").trim();
   s.topBar = v("s_topBar"); s.topBarUr = v("s_topBarUr");
   s.heroTitle = v("s_heroTitle"); s.heroTitleUr = v("s_heroTitleUr");
   s.heroSub = v("s_heroSub"); s.heroSubUr = v("s_heroSubUr");
   s.heroImage = v("s_heroImage");
   s.whatsapp = v("s_whatsapp").replace(/\D/g,"");
-  s.phone = v("s_phone"); s.email = v("s_email");
+  s.phone = v("s_phone"); s.phone2 = v("s_phone2"); s.email = v("s_email");
   s.address = v("s_address"); s.mapEmbed = v("s_mapEmbed");
   s.facebook = v("s_facebook"); s.instagram = v("s_instagram");
+  s.twitter = v("s_twitter");
   s.tiktok = v("s_tiktok"); s.youtube = v("s_youtube");
   s.videoUrl = v("s_videoUrl");
   s.showroom = v("s_showroom").split(",").map(x=>x.trim()).filter(Boolean);
@@ -2140,6 +2627,7 @@ function resetAll(){
 function renderAll(){
   applyTheme();
   applyLang();
+  renderLogo();
   renderCart();
   renderWishlist();
   renderRecent();
@@ -2175,9 +2663,18 @@ document.addEventListener("DOMContentLoaded", () => {
   $("#cartBtn").addEventListener("click", openCart);
   $("#wishBtn").addEventListener("click", () => { renderWishlist(); openModal("wishModal"); });
 
-  // Admin
-  $("#adminLoginBtn").addEventListener("click", openAdmin);
+  // Admin Login (Discreet button)
+  $("#adminLoginBtn") && $("#adminLoginBtn").addEventListener("click", openAdmin);
+  $("#footBrand") && $("#footBrand").addEventListener("dblclick", openAdmin);
   $$(".tab-btn").forEach(b => b.addEventListener("click", () => switchTab(b.dataset.tab)));
+
+  // Secret keyboard combo for Admin (Ctrl + Shift + A)
+  document.addEventListener("keydown", e => {
+    if (e.ctrlKey && e.shiftKey && (e.key === "A" || e.key === "a")) {
+      e.preventDefault();
+      openAdmin();
+    }
+  });
 
   // Search / sort / categories
   $("#searchInput").addEventListener("input", e => { state.search = e.target.value.trim(); renderCatalog(); });
@@ -2213,17 +2710,22 @@ document.addEventListener("DOMContentLoaded", () => {
     const name = $("#cf_name").value.trim();
     const phone = $("#cf_phone").value.trim();
     const msg = $("#cf_msg").value.trim();
-    const text = `Assalam o Alaikum Ali Furniture!\n\nName: ${name}\nPhone: ${phone}\n\n${msg}`;
+    const text = `Assalam o Alaikum Ali Furniture & Decor Point!\n\nName: ${name}\nPhone: ${phone}\n\n${msg}`;
     trackWa();
     window.open(`https://wa.me/${db.settings.whatsapp}?text=${encodeURIComponent(text)}`, "_blank");
     e.target.reset();
     toast("Opening WhatsApp...");
   });
 
-  // Back to top
+  // Navbar dynamic scroll effect + Back to top
   const backTop = $("#backTop");
+  const navbar = $("#navbar");
   window.addEventListener("scroll", () => {
     const y = window.scrollY;
+    if (navbar) {
+      if (y > 35) navbar.classList.add("scrolled");
+      else navbar.classList.remove("scrolled");
+    }
     if (y > 400) { backTop.style.opacity = "1"; backTop.style.pointerEvents = "auto"; }
     else { backTop.style.opacity = "0"; backTop.style.pointerEvents = "none"; }
     animateCounters();
@@ -2247,20 +2749,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   window.addEventListener("hashchange", checkHash);
 
-  // PWA install prompt
-  let deferredPrompt = null;
-  window.addEventListener("beforeinstallprompt", e => {
-    e.preventDefault();
-    deferredPrompt = e;
-    const btn = $("#installBtn");
-    btn.classList.remove("hidden");
-    btn.addEventListener("click", async () => {
-      btn.classList.add("hidden");
-      deferredPrompt.prompt();
-      await deferredPrompt.userChoice;
-      deferredPrompt = null;
-    });
-  });
+  // PWA native install button in mobile menu
+  const pwaBtn = $("#installBtn");
+  if (pwaBtn) {
+    pwaBtn.addEventListener("click", triggerPwaInstall);
+  }
 
   // Service worker
   if ("serviceWorker" in navigator) {
@@ -2272,6 +2765,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Initial render
   renderAll();
   checkHash();
+  checkFirstVisitInstallPrompt();
   maybeShowPopup();
   animateCounters();
 
@@ -2285,6 +2779,7 @@ window.openCart = openCart;
 window.closeModal = closeModal;
 window.openPolicy = openPolicy;
 window.closePopup = closePopup;
+window.triggerPwaInstall = triggerPwaInstall;
 window.openImage = openImage;
 window.shareProduct = shareProduct;
 window.changeQty = changeQty;
