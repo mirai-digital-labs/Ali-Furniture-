@@ -234,6 +234,12 @@ html.dark #navbar.scrolled{
       <a href="#reviews" class="py-2.5 px-2 rounded-lg hover:bg-[var(--alt)]" data-i18n="nav_reviews">Reviews</a>
       <a href="#contact" class="py-2.5 px-2 rounded-lg hover:bg-[var(--alt)]" data-i18n="nav_contact">Contact</a>
       <button id="installBtn" class="mt-2 btn btn-outline py-2.5 text-sm hidden"><i class="fa-solid fa-download"></i><span data-i18n="install_app">Install App</span></button>
+      <div class="pt-3 border-t mt-2 flex items-center justify-between text-xs text-muted" style="border-color:var(--border)">
+        <span class="text-[11px] opacity-60">Ali Furniture &amp; Decor Point</span>
+        <button onclick="openAdmin();$('#mobileMenu').classList.add('hidden')" class="opacity-30 hover:opacity-100 p-2 text-muted transition" title="Store System" aria-label="Admin Access">
+          <i class="fa-solid fa-lock text-xs"></i>
+        </button>
+      </div>
     </nav>
   </div>
 </header>
@@ -487,7 +493,7 @@ html.dark #navbar.scrolled{
 </section>
 
 <!-- ============ FOOTER ============ -->
-<footer class="border-t pt-14 pb-8" style="border-color:var(--border);background:var(--alt)">
+<footer class="border-t pt-14 pb-28 sm:pb-12" style="border-color:var(--border);background:var(--alt)">
   <div class="max-w-7xl mx-auto px-4">
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-9 mb-10">
       <div>
@@ -542,10 +548,12 @@ html.dark #navbar.scrolled{
         <span class="opacity-40">·</span>
         <span>Powered by <a href="https://wa.me/923001234567" target="_blank" rel="noopener" class="gold font-semibold hover:underline">Mirai_Digital_Labs</a></span>
       </div>
-      <div class="flex items-center justify-center gap-1.5 opacity-80">
+      <div class="flex items-center justify-center gap-2 flex-wrap opacity-85">
         <p>&copy; <span id="year"></span> Ali Furniture &amp; Decor Point. <span data-i18n="rights">All rights reserved.</span></p>
-        <!-- Discreet Admin Trigger (visitors won't notice it) -->
-        <span id="adminLoginBtn" class="cursor-pointer text-muted opacity-25 hover:opacity-100 transition px-1 inline-block" title="Store System"><i class="fa-solid fa-lock text-[9px]"></i></span>
+        <!-- Discreet Admin Trigger (Comfortable tap target, never under floating buttons) -->
+        <button id="adminLoginBtn" class="cursor-pointer text-muted opacity-30 hover:opacity-100 transition p-1.5 inline-flex items-center justify-center rounded-lg" title="Store System" aria-label="Admin Access">
+          <i class="fa-solid fa-lock text-[10px]"></i>
+        </button>
       </div>
     </div>
   </div>
