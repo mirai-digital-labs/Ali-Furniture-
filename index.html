@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Ali Furniture &amp; Decor Point — Handcrafted Furniture | Malik Irfan</title>
-<meta name="description" content="Ali Furniture &amp; Decor Point by Malik Irfan — Premium handcrafted sofas, beds, dining tables, wardrobes &amp; office furniture in Jhang Saddar. Farooq Azam Road near Niazi Chowk. Delivery all over Pakistan. Order on WhatsApp: 0313-7015255, 0348-1298093.">
-<meta name="keywords" content="Ali Furniture, Decor Point, Malik Irfan, furniture Jhang, sofa set, bed, dining table, wardrobe, office chair, Farooq Azam road, Niazi Chowk Jhang Saddar">
-<meta name="author" content="Ali Furniture &amp; Decor Point — Malik Irfan">
+<title>Ali Furniture &amp; Deco Point — Handcrafted Furniture | Malik Irfan</title>
+<meta name="description" content="Ali Furniture &amp; Deco Point by Malik Irfan — Premium handcrafted sofas, beds, dining tables, wardrobes &amp; office furniture in Jhang Saddar. Farooq Azam Road near Niazi Chowk. Delivery all over Pakistan. Order on WhatsApp: 0313-7015255, 0348-1298093.">
+<meta name="keywords" content="Ali Furniture, Deco Point, Malik Irfan, furniture Jhang, sofa set, bed, dining table, wardrobe, office chair, Farooq Azam road, Niazi Chowk Jhang Saddar">
+<meta name="author" content="Ali Furniture &amp; Deco Point — Malik Irfan">
 <meta name="theme-color" content="#1a1614">
 <link rel="canonical" href="https://alifurniture.pages.dev/">
 
 <!-- Open Graph / WhatsApp Share Preview -->
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Ali Furniture &amp; Decor Point">
-<meta property="og:title" content="Ali Furniture &amp; Decor Point — Premium Handcrafted Furniture">
+<meta property="og:site_name" content="Ali Furniture &amp; Deco Point">
+<meta property="og:title" content="Ali Furniture &amp; Deco Point — Premium Handcrafted Furniture">
 <meta property="og:description" content="Handcrafted sofas, beds, dining tables &amp; wardrobes by Malik Irfan. Farooq Azam Road, near Niazi Chowk, Jhang Saddar. Easy Exchange Policy. Delivery all over Pakistan.">
 <meta property="og:image" content="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=70">
 <meta property="og:image:width" content="1200">
@@ -53,9 +53,10 @@ html.dark{
   --bg:#100e0c; --alt:#171412; --card:#1b1714; --text:#f3efe8; --muted:#a79d90;
   --border:#2a2521;
 }
-*{-webkit-tap-highlight-color:transparent}
+*{-webkit-tap-highlight-color:transparent;box-sizing:border-box}
+html,body{max-width:100%;overflow-x:hidden;position:relative}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;overflow-x:hidden;transition:background .3s,color .3s}
+body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;transition:background .3s,color .3s}
 html[dir="rtl"] body{font-family:'Noto Naskh Arabic','Inter',sans-serif}
 html[dir="rtl"] .font-display{font-family:'Noto Naskh Arabic','Playfair Display',serif}
 .font-display{font-family:'Playfair Display',serif}
@@ -93,7 +94,8 @@ html.dark .glass{background:rgba(20,17,14,.78)}
 .nav-link:hover{color:var(--gold)}
 .nav-link::after{content:'';position:absolute;left:0;bottom:-2px;height:2px;width:0;background:var(--gold);transition:width .25s}
 .nav-link:hover::after{width:100%}
-.icon-btn{position:relative;width:40px;height:40px;display:grid;place-items:center;border-radius:.7rem;transition:.2s;color:var(--text)}
+.icon-btn{position:relative;width:32px;height:32px;display:grid;place-items:center;border-radius:.6rem;transition:.2s;color:var(--text)}
+@media (min-width:640px){.icon-btn{width:40px;height:40px;border-radius:.7rem}}
 .icon-btn:hover{background:var(--alt);color:var(--gold)}
 .counter-badge{position:absolute;top:-2px;right:-4px;min-width:18px;height:18px;border-radius:999px;background:var(--gold);color:#fff;font-size:10px;font-weight:700;display:grid;place-items:center;padding:0 4px}
 html[dir="rtl"] .counter-badge{right:auto;left:-4px}
@@ -146,6 +148,36 @@ html.dark #navbar.scrolled{
   border-color:var(--gold);
   box-shadow:0 18px 36px -12px rgba(176,141,87,.32);
 }
+
+/* Hero Carousel Styles */
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: scale(1.05);
+  transition: opacity 1s cubic-bezier(.4, 0, .2, 1), transform 7s ease-out;
+  pointer-events: none;
+}
+.hero-slide.active {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+.hero-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .38);
+  transition: all .35s ease;
+  cursor: pointer;
+}
+.hero-dot.active {
+  width: 28px;
+  background: var(--gold);
+  box-shadow: 0 0 10px rgba(176, 141, 87, .7);
+}
 </style>
 
 <!-- Google Analytics — set your ID below to activate (leave empty to disable) -->
@@ -166,10 +198,10 @@ html.dark #navbar.scrolled{
 {
   "@context":"https://schema.org",
   "@type":"FurnitureStore",
-  "name":"Ali Furniture & Decor Point",
+  "name":"Ali Furniture & Deco Point",
   "founder":"Malik Irfan",
   "image":"https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=70",
-  "description":"Premium handcrafted furniture and decor showroom by Malik Irfan. Sofas, beds, dining tables, wardrobes and office furniture. Farooq Azam Road, near Niazi Chowk, Jhang Saddar.",
+  "description":"Premium handcrafted furniture and deco paint showroom by Malik Irfan. Sofas, beds, dining tables, wardrobes and office furniture. Farooq Azam Road, near Niazi Chowk, Jhang Saddar.",
   "address":{"@type":"PostalAddress","streetAddress":"Farooq Azam Road, near Niazi Chowk","addressLocality":"Jhang Saddar","addressRegion":"Punjab","addressCountry":"PK"},
   "telephone":"+92-313-7015255",
   "priceRange":"$$",
@@ -189,14 +221,14 @@ html.dark #navbar.scrolled{
 
 <!-- ============ NAVBAR ============ -->
 <header id="navbar" class="sticky top-0 z-50 glass border-b" style="border-color:var(--border)">
-  <div class="max-w-7xl mx-auto px-3 sm:px-4 h-16 flex items-center justify-between gap-2">
-    <a href="#home" id="navBrand" class="flex items-center gap-2.5 shrink-0 group">
-      <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl grid place-items-center font-display font-bold text-lg shadow-md transition group-hover:scale-105 shrink-0" style="background:linear-gradient(135deg,#b08d57,#e5c483);color:#1a1614;box-shadow:0 4px 14px rgba(176,141,87,.35)">
-        <span class="text-sm font-bold tracking-tighter">AF</span>
+  <div class="max-w-7xl mx-auto px-2.5 sm:px-4 h-16 flex items-center justify-between gap-1 sm:gap-2">
+    <a href="#home" id="navBrand" class="flex items-center gap-1.5 sm:gap-2.5 shrink-0 group">
+      <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-xl grid place-items-center font-display font-bold text-sm sm:text-lg shadow-md transition group-hover:scale-105 shrink-0" style="background:linear-gradient(135deg,#b08d57,#e5c483);color:#1a1614;box-shadow:0 4px 14px rgba(176,141,87,.35)">
+        <span class="text-xs sm:text-sm font-bold tracking-tighter">AF</span>
       </div>
       <div class="flex flex-col leading-tight">
-        <span class="font-display text-[17px] sm:text-xl font-bold tracking-tight group-hover:text-[var(--gold)] transition">Ali <span class="gold">Furniture</span></span>
-        <span class="text-[9px] sm:text-[10px] tracking-[0.22em] uppercase font-semibold text-[var(--gold)] -mt-0.5">and decor point</span>
+        <span class="font-display text-[15px] sm:text-xl font-bold tracking-tight group-hover:text-[var(--gold)] transition">Ali <span class="gold">Furniture</span></span>
+        <span class="text-[8px] sm:text-[10px] tracking-[0.2em] sm:tracking-[0.22em] uppercase font-semibold text-[var(--gold)] -mt-0.5">and deco point</span>
       </div>
     </a>
 
@@ -209,18 +241,18 @@ html.dark #navbar.scrolled{
       <a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a>
     </nav>
 
-    <div class="flex items-center gap-0.5">
-      <button id="langBtn" class="h-9 px-2.5 rounded-lg text-xs font-bold border transition hover:border-[var(--gold)] hover:text-[var(--gold)]" style="border-color:var(--border)" title="Language">EN</button>
-      <button id="themeBtn" class="icon-btn" title="Dark mode"><i class="fa-solid fa-moon text-[15px]"></i></button>
+    <div class="flex items-center gap-0.5 sm:gap-1 shrink-0">
+      <button id="langBtn" class="h-8 sm:h-9 px-2 sm:px-2.5 rounded-lg text-[11px] sm:text-xs font-bold border transition hover:border-[var(--gold)] hover:text-[var(--gold)]" style="border-color:var(--border)" title="Language">EN</button>
+      <button id="themeBtn" class="icon-btn" title="Dark mode"><i class="fa-solid fa-moon text-[13px] sm:text-[15px]"></i></button>
       <button id="wishBtn" class="icon-btn" title="Wishlist" aria-label="Wishlist">
-        <i class="fa-regular fa-heart text-[16px]"></i>
+        <i class="fa-regular fa-heart text-[14px] sm:text-[16px]"></i>
         <span class="counter-badge" id="wishCount" style="display:none">0</span>
       </button>
       <button id="cartBtn" class="icon-btn" title="Cart" aria-label="Cart">
-        <i class="fa-solid fa-bag-shopping text-[15px]"></i>
+        <i class="fa-solid fa-bag-shopping text-[13px] sm:text-[15px]"></i>
         <span class="counter-badge" id="cartCount" style="display:none">0</span>
       </button>
-      <button id="menuBtn" class="icon-btn lg:hidden" aria-label="Menu"><i class="fa-solid fa-bars text-[16px]"></i></button>
+      <button id="menuBtn" class="icon-btn lg:hidden" aria-label="Menu"><i class="fa-solid fa-bars text-[14px] sm:text-[16px]"></i></button>
     </div>
   </div>
 
@@ -235,7 +267,7 @@ html.dark #navbar.scrolled{
       <a href="#contact" class="py-2.5 px-2 rounded-lg hover:bg-[var(--alt)]" data-i18n="nav_contact">Contact</a>
       <button id="installBtn" class="mt-2 btn btn-outline py-2.5 text-sm hidden"><i class="fa-solid fa-download"></i><span data-i18n="install_app">Install App</span></button>
       <div class="pt-3 border-t mt-2 flex items-center justify-between text-xs text-muted" style="border-color:var(--border)">
-        <span class="text-[11px] opacity-60">Ali Furniture &amp; Decor Point</span>
+        <span class="text-[11px] opacity-60">Ali Furniture &amp; Deco Point</span>
         <button onclick="openAdmin();$('#mobileMenu').classList.add('hidden')" class="opacity-30 hover:opacity-100 p-2 text-muted transition" title="Store System" aria-label="Admin Access">
           <i class="fa-solid fa-lock text-xs"></i>
         </button>
@@ -244,29 +276,66 @@ html.dark #navbar.scrolled{
   </div>
 </header>
 
-<!-- ============ HERO ============ -->
-<section id="home" class="relative min-h-[86vh] flex items-center overflow-hidden">
-  <img id="heroImg" alt="Ali Furniture showroom" class="absolute inset-0 w-full h-full object-cover" src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=70" onerror="imgFail(this)">
-  <div class="absolute inset-0" style="background:linear-gradient(90deg,rgba(12,10,8,.92) 0%,rgba(12,10,8,.65) 50%,rgba(12,10,8,.3) 100%)"></div>
-  <div class="relative max-w-7xl mx-auto px-4 py-20 sm:py-28 w-full">
-    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full mb-4 border border-[var(--gold)]/30" style="background:rgba(176,141,87,.15)">
-      <i class="fa-solid fa-location-dot text-xs text-[var(--gold2)]"></i>
-      <p class="uppercase tracking-[.25em] text-[11px] font-semibold text-[var(--gold2)]">Farooq Azam Road, Niazi Chowk · Jhang Saddar</p>
+<!-- ============ HERO CAROUSEL ============ -->
+<section id="home" class="relative min-h-[88vh] sm:min-h-[92vh] flex items-center overflow-hidden group select-none">
+  <!-- Slides Container -->
+  <div id="heroSlider" class="absolute inset-0 w-full h-full overflow-hidden">
+    <div class="hero-slide active">
+      <img id="heroImg" alt="Luxury Living Room" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=75" onerror="imgFail(this)">
     </div>
-    <h1 id="heroTitle" class="font-display text-4xl sm:text-6xl lg:text-7xl font-bold leading-[1.08] max-w-2xl text-white">Furniture That Defines Your Home</h1>
-    <p id="heroSub" class="mt-5 max-w-xl text-sm sm:text-base text-white/80 leading-relaxed">Handcrafted solid Sheesham &amp; Ash wood furniture by Malik Irfan. Built to last generations, delivered with pride across Pakistan.</p>
+    <div class="hero-slide">
+      <img alt="Royal Bedroom Suites" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1600&q=75" loading="lazy" onerror="imgFail(this)">
+    </div>
+    <div class="hero-slide">
+      <img alt="Exquisite Dining Table" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=1600&q=75" loading="lazy" onerror="imgFail(this)">
+    </div>
+    <div class="hero-slide">
+      <img alt="Executive Office" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1600&q=75" loading="lazy" onerror="imgFail(this)">
+    </div>
+    <div class="hero-slide">
+      <img alt="Designer Wardrobe & Interior" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=1600&q=75" loading="lazy" onerror="imgFail(this)">
+    </div>
+  </div>
+
+  <!-- Ambient Dark Gradient Overlay for Readability -->
+  <div class="absolute inset-0 pointer-events-none" style="background:linear-gradient(90deg,rgba(12,10,8,.94) 0%,rgba(12,10,8,.72) 48%,rgba(12,10,8,.38) 100%)"></div>
+
+  <!-- Hero Content -->
+  <div class="relative max-w-7xl mx-auto px-4 py-20 sm:py-28 w-full z-10">
+    <div id="heroBadgeWrap" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full mb-4 border border-[var(--gold)]/30 backdrop-blur-md transition-all duration-500" style="background:rgba(176,141,87,.15)">
+      <i class="fa-solid fa-location-dot text-xs text-[var(--gold2)]"></i>
+      <p id="heroBadge" class="uppercase tracking-[.25em] text-[11px] font-semibold text-[var(--gold2)]">Farooq Azam Road, Niazi Chowk · Jhang Saddar</p>
+    </div>
+    <h1 id="heroTitle" class="font-display text-4xl sm:text-6xl lg:text-7xl font-bold leading-[1.08] max-w-2xl text-white transition-opacity duration-500">Furniture That Defines Your Home</h1>
+    <p id="heroSub" class="mt-5 max-w-xl text-sm sm:text-base text-white/80 leading-relaxed transition-opacity duration-500">Handcrafted solid Sheesham &amp; Ash wood furniture by Malik Irfan. Built to last generations, delivered with pride across Pakistan.</p>
+    
     <div class="mt-8 flex flex-wrap gap-3">
-      <a href="#shop" class="btn btn-gold px-7 py-3.5 text-sm"><i class="fa-solid fa-couch"></i><span data-i18n="shop_now">Shop Now</span></a>
-      <a id="heroWa" href="#" target="_blank" rel="noopener" class="btn px-7 py-3.5 text-sm text-white border border-white/30 hover:bg-white/10">
-        <i class="fa-brands fa-whatsapp text-lg"></i><span data-i18n="order_wa">Order on WhatsApp</span>
+      <a id="heroCta" href="#shop" class="btn btn-gold px-7 py-3.5 text-sm shadow-lg hover:scale-105 transition">
+        <i class="fa-solid fa-couch"></i><span id="heroCtaText" data-i18n="shop_now">Shop Now</span>
+      </a>
+      <a id="heroWa" href="#" target="_blank" rel="noopener" class="btn px-7 py-3.5 text-sm text-white border border-white/30 hover:bg-white/10 backdrop-blur-sm">
+        <i class="fa-brands fa-whatsapp text-lg text-emerald-400"></i><span data-i18n="order_wa">Order on WhatsApp</span>
       </a>
     </div>
-    <div class="mt-10 grid grid-cols-3 gap-4 max-w-md">
+
+    <!-- Stats Counter Bar -->
+    <div class="mt-10 grid grid-cols-3 gap-4 max-w-md pt-4 border-t border-white/10">
       <div><div class="font-display text-2xl sm:text-3xl font-bold" style="color:var(--gold2)"><span class="counter" data-target="5000">0</span>+</div><div class="text-[11px] text-white/60 mt-1" data-i18n="stat_homes">Happy Homes</div></div>
       <div><div class="font-display text-2xl sm:text-3xl font-bold" style="color:var(--gold2)"><span class="counter" data-target="15">0</span>+</div><div class="text-[11px] text-white/60 mt-1" data-i18n="stat_years">Years Experience</div></div>
       <div><div class="font-display text-2xl sm:text-3xl font-bold" style="color:var(--gold2)"><span class="counter" data-target="250">0</span>+</div><div class="text-[11px] text-white/60 mt-1" data-i18n="stat_products">Designs</div></div>
     </div>
   </div>
+
+  <!-- Left / Right Arrows (Sleek Glass Buttons) -->
+  <button id="heroPrev" class="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full grid place-items-center text-white/70 hover:text-white border border-white/20 hover:border-[var(--gold)] hover:bg-[var(--gold)]/20 transition backdrop-blur-md opacity-0 group-hover:opacity-100" aria-label="Previous slide">
+    <i class="fa-solid fa-chevron-left text-sm"></i>
+  </button>
+  <button id="heroNext" class="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full grid place-items-center text-white/70 hover:text-white border border-white/20 hover:border-[var(--gold)] hover:bg-[var(--gold)]/20 transition backdrop-blur-md opacity-0 group-hover:opacity-100" aria-label="Next slide">
+    <i class="fa-solid fa-chevron-right text-sm"></i>
+  </button>
+
+  <!-- Slider Indicator Dots -->
+  <div id="heroDots" class="absolute bottom-5 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2"></div>
 </section>
 
 <!-- ============ TRUST / FEATURES (SEPARATE STANDALONE SECTION WITH HOVER EFFECTS) ============ -->
@@ -383,7 +452,7 @@ html.dark #navbar.scrolled{
     <div class="reveal order-2 lg:order-1">
       <p class="uppercase tracking-[.28em] text-[11px] gold mb-3" data-i18n="our_story">Our Story</p>
       <h2 class="font-display text-3xl sm:text-4xl font-bold leading-tight" data-i18n="about_title">Craftsmanship &amp; Trust by Malik Irfan</h2>
-      <p class="muted text-sm mt-5 leading-relaxed" data-i18n="about_p1">Ali Furniture &amp; Decor Point, led by Malik Irfan, is your premier destination on Farooq Azam Road, near Niazi Chowk, Jhang Saddar. We craft every article with pure passion, employing seasoned artisans who master the art of solid wood fabrication.</p>
+      <p class="muted text-sm mt-5 leading-relaxed" data-i18n="about_p1">Ali Furniture &amp; Deco Point, led by Malik Irfan, is your premier destination on Farooq Azam Road, near Niazi Chowk, Jhang Saddar. We craft every article with pure passion, employing seasoned artisans who master the art of solid wood fabrication.</p>
       <p class="muted text-sm mt-3 leading-relaxed" data-i18n="about_p2">From royal wedding sets and luxury velvet sofas to executive office desks and wardrobes, we use 100% genuine Sheesham (Tali) and Ash wood. With our Easy Exchange Policy and nationwide delivery, your satisfaction is our lifelong promise.</p>
       <div class="grid grid-cols-3 gap-4 mt-7">
         <div class="card p-4 text-center"><div class="font-display text-2xl font-bold gold"><span class="counter" data-target="5000">0</span>+</div><div class="text-[11px] muted mt-1" data-i18n="stat_homes">Happy Homes</div></div>
@@ -503,7 +572,7 @@ html.dark #navbar.scrolled{
           </div>
           <div class="flex flex-col leading-tight">
             <span class="font-display text-[17px] sm:text-xl font-bold tracking-tight">Ali <span class="gold">Furniture</span></span>
-            <span class="text-[9px] sm:text-[10px] tracking-[0.22em] uppercase font-semibold text-[var(--gold)] -mt-0.5">and decor point</span>
+            <span class="text-[9px] sm:text-[10px] tracking-[0.22em] uppercase font-semibold text-[var(--gold)] -mt-0.5">and deco point</span>
           </div>
         </div>
         <p class="text-xs muted leading-relaxed" data-i18n="footer_about">Premium handcrafted furniture from Jhang Saddar by Malik Irfan. Solid Sheesham wood, made to order, delivered all over Pakistan.</p>
@@ -537,7 +606,7 @@ html.dark #navbar.scrolled{
           <li class="flex items-center gap-2"><i class="fa-solid fa-envelope gold"></i><span id="footEmail">info@alifurniture.pk</span></li>
         </ul>
         <div class="mt-4 flex items-center gap-3">
-          <img id="qrImg" src="" alt="QR Code" class="w-16 h-16 rounded-lg bg-white p-1" loading="lazy">
+          <img id="qrImg" src="" alt="QR Code" onclick="downloadQrCode()" title="Click to download QR Code" class="w-16 h-16 rounded-lg bg-white p-1 cursor-pointer hover:scale-105 transition shadow-sm" loading="lazy">
           <p class="text-[10px] muted leading-tight" data-i18n="scan_qr">Scan to open the site on your phone</p>
         </div>
       </div>
@@ -549,7 +618,7 @@ html.dark #navbar.scrolled{
         <span>Powered by <a href="https://wa.me/923001234567" target="_blank" rel="noopener" class="gold font-semibold hover:underline">Mirai_Digital_Labs</a></span>
       </div>
       <div class="flex items-center justify-center gap-2 flex-wrap opacity-85">
-        <p>&copy; <span id="year"></span> Ali Furniture &amp; Decor Point. <span data-i18n="rights">All rights reserved.</span></p>
+        <p>&copy; <span id="year"></span> Ali Furniture &amp; Deco Point. <span data-i18n="rights">All rights reserved.</span></p>
         <!-- Discreet Admin Trigger (Comfortable tap target, never under floating buttons) -->
         <button id="adminLoginBtn" class="cursor-pointer text-muted opacity-30 hover:opacity-100 transition p-1.5 inline-flex items-center justify-center rounded-lg" title="Store System" aria-label="Admin Access">
           <i class="fa-solid fa-lock text-[10px]"></i>
@@ -632,7 +701,7 @@ html.dark #navbar.scrolled{
       <i class="fa-solid fa-mobile-screen-button"></i> Official Mobile App
     </div>
     <h3 class="font-display text-xl sm:text-2xl font-bold">Ali Furniture</h3>
-    <p class="text-[10px] uppercase tracking-widest font-semibold gold -mt-0.5 mb-3">and decor point</p>
+    <p class="text-[10px] uppercase tracking-widest font-semibold gold -mt-0.5 mb-3">and deco point</p>
     <p class="muted text-xs leading-relaxed mb-4">Official app install karein apne mobile par aur payein super fast browsing, direct WhatsApp order aur exclusive discount offers!</p>
     
     <div class="space-y-2 text-start text-xs card p-3 mb-5" style="background:var(--alt)">
@@ -685,6 +754,7 @@ html.dark #navbar.scrolled{
         <div class="max-w-6xl mx-auto px-3 sm:px-4 pb-2 flex gap-1.5 overflow-x-auto" style="scrollbar-width:none">
           <button class="tab-btn btn btn-outline px-3 py-1.5 text-xs whitespace-nowrap active" data-tab="dash" data-i18n="tab_dash">Dashboard</button>
           <button class="tab-btn btn btn-outline px-3 py-1.5 text-xs whitespace-nowrap" data-tab="products" data-i18n="tab_products">Products</button>
+          <button class="tab-btn btn btn-outline px-3 py-1.5 text-xs whitespace-nowrap" data-tab="categories"><i class="fa-solid fa-layer-group me-1"></i><span>Categories</span></button>
           <button class="tab-btn btn btn-outline px-3 py-1.5 text-xs whitespace-nowrap" data-tab="reviews" data-i18n="tab_reviews">Reviews</button>
           <button class="tab-btn btn btn-outline px-3 py-1.5 text-xs whitespace-nowrap" data-tab="orders" data-i18n="tab_orders">Orders</button>
           <button class="tab-btn btn btn-outline px-3 py-1.5 text-xs whitespace-nowrap" data-tab="settings" data-i18n="tab_settings">Settings</button>
@@ -706,6 +776,7 @@ html.dark #navbar.scrolled{
             <h3 class="font-semibold text-sm mb-2">Quick Actions</h3>
             <div class="flex flex-wrap gap-2">
               <button onclick="switchTab('products');resetProductForm()" class="btn btn-gold px-4 py-2 text-xs"><i class="fa-solid fa-plus"></i> Add Product</button>
+              <button onclick="switchTab('categories');resetCategoryForm()" class="btn btn-outline px-4 py-2 text-xs"><i class="fa-solid fa-layer-group"></i> Manage Categories</button>
               <button onclick="exportData()" class="btn btn-outline px-4 py-2 text-xs"><i class="fa-solid fa-download"></i> Export Backup</button>
               <button onclick="switchTab('reviews')" class="btn btn-outline px-4 py-2 text-xs"><i class="fa-solid fa-star"></i> Moderate Reviews</button>
             </div>
@@ -772,6 +843,52 @@ html.dark #navbar.scrolled{
           <div class="card p-4">
             <h3 class="font-semibold text-sm mb-3">All Products (<span id="prodCount">0</span>)</h3>
             <div id="adminProductList" class="space-y-2"></div>
+          </div>
+        </div>
+
+        <!-- CATEGORIES -->
+        <div class="admin-tab hidden" id="tab-categories">
+          <div class="card p-4 mb-4">
+            <div class="flex items-center justify-between mb-3">
+              <div>
+                <h3 class="font-semibold text-sm" id="catFormTitle">Add New Category</h3>
+                <p class="text-[11px] muted">Change category names (English &amp; Urdu) or add new collections</p>
+              </div>
+              <button onclick="resetCategoryForm()" class="text-xs muted hover:text-[var(--gold)]"><i class="fa-solid fa-rotate-left me-1"></i>Reset</button>
+            </div>
+            <input type="hidden" id="ac_id">
+            <div class="grid sm:grid-cols-2 gap-3">
+              <div>
+                <label class="block text-xs font-medium mb-1">Category Name (English)</label>
+                <input id="ac_name" class="inp" placeholder="e.g. Sofa, Bed, Dining...">
+              </div>
+              <div>
+                <label class="block text-xs font-medium mb-1">Category Name (Urdu)</label>
+                <input id="ac_nameUr" class="inp" dir="rtl" placeholder="مثلاً: صوفہ سیٹ، بیڈ سیٹ...">
+              </div>
+            </div>
+            <div class="flex items-center justify-between mt-3 pt-3 border-t flex-wrap gap-2" style="border-color:var(--border)">
+              <label class="flex items-center gap-2 text-xs cursor-pointer select-none">
+                <input type="checkbox" id="ac_hidden" class="rounded accent-[var(--gold)]">
+                <span>Hide this category from shop visitors (products will also be hidden)</span>
+              </label>
+              <div class="flex gap-2">
+                <button onclick="resetCategoryForm()" class="btn btn-outline px-4 py-2 text-xs">Cancel</button>
+                <button onclick="saveCategoryForm()" class="btn btn-gold px-5 py-2 text-xs"><i class="fa-solid fa-check"></i> <span id="catSubmitBtn">Save Category</span></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Existing Categories List -->
+          <div class="card p-4">
+            <div class="flex items-center justify-between mb-3">
+              <div>
+                <h3 class="font-semibold text-sm">Store Categories (<span id="catCount">0</span>)</h3>
+                <p class="text-[11px] muted">Rename, toggle visibility (show/hide), or delete categories</p>
+              </div>
+              <button onclick="resetCategoryForm();$('#ac_name').focus()" class="btn btn-gold px-3 py-1.5 text-xs"><i class="fa-solid fa-plus me-1"></i>New Category</button>
+            </div>
+            <div id="adminCategoriesList" class="space-y-2"></div>
           </div>
         </div>
 
@@ -908,11 +1025,19 @@ html.dark #navbar.scrolled{
           </div>
 
           <div class="card p-4">
-            <h3 class="font-semibold text-sm mb-2"><i class="fa-solid fa-qrcode gold me-2"></i>Showroom QR Code</h3>
-            <p class="text-xs muted mb-3">Print this and stick it outside your showroom so visitors can open the site instantly.</p>
-            <div class="flex items-center gap-4">
-              <img id="adminQr" src="" alt="QR" class="w-28 h-28 rounded-lg bg-white p-1 border" style="border-color:var(--border)">
-              <div class="text-xs muted break-all" id="qrUrlText"></div>
+            <h3 class="font-semibold text-sm mb-1 flex items-center gap-2"><i class="fa-solid fa-qrcode gold"></i>Showroom Standee &amp; QR Code</h3>
+            <p class="text-xs muted mb-3">Download or print this QR code standee to display at your showroom counter or front window. Walking customers can scan it with their mobile phones to view your live catalog and rates.</p>
+            <div class="flex flex-col sm:flex-row items-center gap-4 p-3 rounded-xl mb-3" style="background:var(--alt);border:1px solid var(--border)">
+              <img id="adminQr" src="" alt="QR Code" class="w-28 h-28 rounded-lg bg-white p-1 border shrink-0" style="border-color:var(--border)">
+              <div class="flex-1 min-w-0 text-center sm:text-start">
+                <span class="badge-pill mb-1.5" style="background:rgba(176,141,87,.2);color:var(--gold)">Scan &amp; Visit</span>
+                <p class="text-xs font-semibold">Ali Furniture &amp; Deco Point</p>
+                <div class="text-[11px] muted break-all mt-1" id="qrUrlText"></div>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <button onclick="downloadQrCode()" class="btn btn-gold px-4 py-2.5 text-xs"><i class="fa-solid fa-download"></i> Download HD QR (PNG)</button>
+              <button onclick="printStandee()" class="btn btn-outline px-4 py-2.5 text-xs"><i class="fa-solid fa-print"></i> Print Branded Standee</button>
             </div>
           </div>
 
@@ -953,15 +1078,15 @@ const uid = () => 'p' + Date.now().toString(36) + Math.random().toString(36).sli
 const DEFAULTS = {
   settings: {
     brand: "Ali Furniture",
-    subBrand: "and decor point",
+    subBrand: "and deco point",
     owner: "Malik Irfan",
     logoUrl: "",
     topBar: "✨ Free Delivery Above Rs 50,000 · Easy Exchange Policy · Malik Irfan: 0313-7015255 / 0348-1298093 ✨",
     topBarUr: "✨ 50,000 روپے سے زائد آرڈرز پر مفت ڈیلیوری · آسان ایکسچینج پالیسی · ملک عرفان: 03137015255 / 03481298093 ✨",
     heroTitle: "Furniture That Defines Your Home",
     heroTitleUr: "فرنیچر جو آپ کے گھر کی پہچان ہے",
-    heroSub: "Handcrafted from solid Sheesham & Ash wood by master craftsmen. Ali Furniture & Decor Point by Malik Irfan.",
-    heroSubUr: "علی فرنیچر اینڈ ڈیکور پوائنٹ — ملک عرفان کی زیر نگرانی تیار کردہ شیشم کا پریمیم فرنیچر۔",
+    heroSub: "Handcrafted from solid Sheesham & Ash wood by master craftsmen. Ali Furniture & Deco Point by Malik Irfan.",
+    heroSubUr: "علی فرنیچر اینڈ ڈیکو پوائنٹ — ملک عرفان کی زیر نگرانی تیار کردہ شیشم کا پریمیم فرنیچر۔",
     heroImage: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=70",
     whatsapp: "923137015255",
     phone: "0313-7015255",
@@ -997,10 +1122,18 @@ const DEFAULTS = {
       { name: "Peshawar", charge: 3000, days: "4-6 days" },
       { name: "Quetta", charge: 4000, days: "5-7 days" }
     ],
-    popup: { enabled: true, title: "Special Offer — 10% Flat Discount", text: "Ali Furniture & Decor Point (Malik Irfan) ki taraf se har order par 10% Discount! Code ALI10 use karein ya WhatsApp par rabta karein." },
+    popup: { enabled: true, title: "Special Offer — 10% Flat Discount", text: "Ali Furniture & Deco Point (Malik Irfan) ki taraf se har order par 10% Discount! Code ALI10 use karein ya WhatsApp par rabta karein." },
     password: "admin123",
-    cloudUrl: ""
+    cloudUrl: "https://ali-furniture-shop-default-rtdb.firebaseio.com"
   },
+  categories: [
+    { id: "c1", name: "Sofa", nameUr: "صوفہ سیٹ", hidden: false },
+    { id: "c2", name: "Bed", nameUr: "بیڈ سیٹ", hidden: false },
+    { id: "c3", name: "Dining", nameUr: "ڈائننگ ٹیبل", hidden: false },
+    { id: "c4", name: "Office", nameUr: "آفس فرنیچر", hidden: false },
+    { id: "c5", name: "Wardrobe", nameUr: "الماری و وارڈروب", hidden: false },
+    { id: "c6", name: "Tables", nameUr: "ٹیبل و کنسول", hidden: false }
+  ],
   products: [
     // SOFAS
     {
@@ -1353,7 +1486,7 @@ const DEFAULTS = {
   reviews: [
     { id: "r1", name: "Chaudhry Tariq (Jhang)", rating: 5, text: "Malik Irfan bhai se 7-seater sofa set banwaya tha. Woodwork aur velvet finish 100% showroom se bhi behtareen hai. Bohat shukriya!", photo: "", date: "2024-11-12", approved: true, verified: true },
     { id: "r2", name: "Zahid Mehmood (Faisalabad)", rating: 5, text: "King size sheesham bed aur dressing table order kiya tha. Packing aur safe delivery zabardast thi. Solid wood hai bilkul awaaz nahi karti.", photo: "", date: "2024-10-28", approved: true, verified: true },
-    { id: "r3", name: "Dr. Asim Raza (Lahore)", rating: 5, text: "Ali Furniture & Decor Point ka dining table set kamal hai. Niazi Chowk Jhang se Lahore safe deliver hua. Easy Exchange Policy aur service bohot achi hai.", photo: "", date: "2024-09-15", approved: true, verified: true }
+    { id: "r3", name: "Dr. Asim Raza (Lahore)", rating: 5, text: "Ali Furniture & Deco Point ka dining table set kamal hai. Niazi Chowk Jhang se Lahore safe deliver hua. Easy Exchange Policy aur service bohot achi hai.", photo: "", date: "2024-09-15", approved: true, verified: true }
   ],
   orders: [],
   analytics: { waClicks: 0, cartAdds: 0 }
@@ -1377,7 +1510,7 @@ const I18N = {
     add_cart:"کارٹ میں ڈالیں", in_stock:"اسٹاک میں", made_order:"آرڈر پر تیار", sold_out:"فروخت شدہ",
     recently_viewed:"حال ہی میں دیکھا گیا", fresh:"جھنگ صدر سے نیا شوکیس", new_arrivals:"نئی آمد",
     our_story:"ہماری کہانی", about_title:"ملک عرفان کی زیر نگرانی کاریگری",
-    about_p1:"علی فرنیچر اینڈ ڈیکور پوائنٹ فاروق اعظم روڈ، نزد نیازی چوک، جھنگ صدر میں پریمیم فرنیچر کا بااعتماد نام ہے۔ ملک عرفان کی قیادت میں ہمارے ماہر کاریگر ہر پیس خالص شیشم سے تیار کرتے ہیں۔",
+    about_p1:"علی فرنیچر اینڈ ڈیکو پوائنٹ فاروق اعظم روڈ، نزد نیازی چوک، جھنگ صدر میں پریمیم فرنیچر کا بااعتماد نام ہے۔ ملک عرفان کی قیادت میں ہمارے ماہر کاریگر ہر پیس خالص شیشم سے تیار کرتے ہیں۔",
     about_p2:"ہم خالص شیشم اور اش لکڑی استعمال کرتے ہیں، اسے صحیح طریقے سے خشک کرتے ہیں اور جدید پالش سے مزین کرتے ہیں۔ آسان ایکسچینج پالیسی اور پورے پاکستان میں ڈیلیوری دستیاب ہے۔",
     visit_showroom:"ہمارا شوروم دیکھیں",
     real_photos:"اصلی تصاویر، اصلی ورکشاپ", gallery_title:"ہمارے شوروم کے اندر", gallery_sub:"کوئی فیک فوٹو نہیں — یہیں آپ کا فرنیچر تیار ہوتا ہے۔",
@@ -1430,7 +1563,18 @@ function loadDB(){
       const parsed = JSON.parse(raw);
       db = parsed;
       db.settings = Object.assign(clone(DEFAULTS.settings), parsed.settings || {});
+      if (!db.settings.cloudUrl) db.settings.cloudUrl = DEFAULTS.settings.cloudUrl;
+      if (db.settings.subBrand === "and decor point") db.settings.subBrand = "and deco point";
       if (!Array.isArray(db.products) || !db.products.length) db.products = clone(DEFAULTS.products);
+      if (!Array.isArray(db.categories) || !db.categories.length) db.categories = clone(DEFAULTS.categories);
+      // Auto-migrate any product categories missing from db.categories
+      if (Array.isArray(db.products) && Array.isArray(db.categories)) {
+        db.products.forEach(p => {
+          if (p.category && !db.categories.some(c => c.name.toLowerCase() === p.category.toLowerCase())) {
+            db.categories.push({ id: "cat_" + Math.random().toString(36).slice(2, 8), name: p.category, nameUr: "", hidden: false });
+          }
+        });
+      }
       if (!Array.isArray(db.reviews)) db.reviews = [];
       if (!Array.isArray(db.orders)) db.orders = [];
       if (!db.analytics) db.analytics = { waClicks:0, cartAdds:0 };
@@ -1494,14 +1638,14 @@ function renderTopBar(){
 function renderLogo(){
   const s = db.settings;
   const logoHtml = s.logoUrl 
-    ? `<img src="${esc(s.logoUrl)}" alt="${esc(s.brand)}" class="h-10 sm:h-11 w-auto object-contain rounded-lg">`
-    : `<div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl grid place-items-center font-display font-bold text-lg shadow-md transition group-hover:scale-105 shrink-0" style="background:linear-gradient(135deg,#b08d57,#e5c483);color:#1a1614;box-shadow:0 4px 14px rgba(176,141,87,.35)">
-        <span class="text-sm font-bold tracking-tighter">AF</span>
+    ? `<img src="${esc(s.logoUrl)}" alt="${esc(s.brand)}" class="h-9 sm:h-11 w-auto object-contain rounded-lg">`
+    : `<div class="w-9 h-9 sm:w-11 sm:h-11 rounded-xl grid place-items-center font-display font-bold text-sm sm:text-lg shadow-md transition group-hover:scale-105 shrink-0" style="background:linear-gradient(135deg,#b08d57,#e5c483);color:#1a1614;box-shadow:0 4px 14px rgba(176,141,87,.35)">
+        <span class="text-xs sm:text-sm font-bold tracking-tighter">AF</span>
        </div>`;
   const textHtml = `
     <div class="flex flex-col leading-tight">
-      <span class="font-display text-[17px] sm:text-xl font-bold tracking-tight group-hover:text-[var(--gold)] transition">Ali <span class="gold">Furniture</span></span>
-      <span class="text-[9px] sm:text-[10px] tracking-[0.22em] uppercase font-semibold text-[var(--gold)] -mt-0.5">and decor point</span>
+      <span class="font-display text-[15px] sm:text-xl font-bold tracking-tight group-hover:text-[var(--gold)] transition">Ali <span class="gold">Furniture</span></span>
+      <span class="text-[8px] sm:text-[10px] tracking-[0.2em] sm:tracking-[0.22em] uppercase font-semibold text-[var(--gold)] -mt-0.5">${esc(s.subBrand || "and deco point")}</span>
     </div>`;
   const navEl = $("#navBrand");
   if (navEl) navEl.innerHTML = logoHtml + textHtml;
@@ -1509,14 +1653,135 @@ function renderLogo(){
   if (footEl) footEl.innerHTML = logoHtml + textHtml;
 }
 
+/* ---------- HERO CAROUSEL ENGINE ---------- */
+const HERO_SLIDES = [
+  {
+    image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=75",
+    badge: "Farooq Azam Road, Niazi Chowk · Jhang Saddar",
+    badgeUr: "فاروق اعظم روڈ، نیازی چوک · جھنگ صدر",
+    title: "Furniture That Defines Your Home",
+    titleUr: "فرنیچر جو آپ کے گھر کو اپنا پن دے",
+    sub: "Handcrafted solid Sheesham & Ash wood furniture by Malik Irfan. Built to last generations, delivered with pride across Pakistan.",
+    subUr: "علی فرنیچر اینڈ ڈیکو پوائنٹ — ملک عرفان کی زیر نگرانی خالص شیشم اور راش ووڈ کا پائیدار فرنیچر۔",
+    cta: "Shop Sofas", ctaUr: "صوفہ کلیکشن", ctaLink: "#shop"
+  },
+  {
+    image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1600&q=75",
+    badge: "100% Solid Sheesham & Tali Wood",
+    badgeUr: "100% خالص پکی ٹالی اور شیشم ووڈ",
+    title: "Royal Bedroom Suites & Bridal Sets",
+    titleUr: "شاہی برائیڈل بیڈ سیٹس اور شاہکار ڈیزائنز",
+    sub: "Hand-carved master bedroom sets built to last generations with premium high-density comfort and lifetime durability.",
+    subUr: "ہاتھ کی نفاست بھری تراش خراش اور زندگی بھر ساتھ نبھانے والے پائیدار بیڈ روم سیٹس۔",
+    cta: "View Beds", ctaUr: "بیڈ سیٹس دیکھیں", ctaLink: "#shop"
+  },
+  {
+    image: "https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=1600&q=75",
+    badge: "Hand-Polished · Custom Sizing Available",
+    badgeUr: "کسٹم سائز اور اپنی پسند کی پالش دستیاب",
+    title: "Exquisite Dining & Banquet Tables",
+    titleUr: "خوبصورت اور پروقار ڈائننگ ٹیبلز",
+    sub: "Gather your family around masterfully constructed solid timber dining masterpieces with scratch-resistant finishes.",
+    subUr: "فیملی کے لیے پائیدار اور شاندار ڈائننگ سیٹس، جدید اور کلاسک انداز میں۔",
+    cta: "Explore Dining", ctaUr: "ڈائننگ ٹیبلز", ctaLink: "#shop"
+  },
+  {
+    image: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1600&q=75",
+    badge: "Free Delivery Above Rs 50,000 · Easy Exchange",
+    badgeUr: "50,000 سے زائد پر فری ڈلیوری · آسان ایکسچینج",
+    title: "Executive Office & Study Collections",
+    titleUr: "ایگزیکٹو آفس اور سٹڈی فرنیچر",
+    sub: "Ergonomic, prestigious and durable wooden workspaces custom-fitted for modern professionals and executives.",
+    subUr: "دفاتر اور کام کی جگہوں کے لیے باوقار، مضبوط اور پرسکون فرنیچر۔",
+    cta: "Office Furniture", ctaUr: "آفس فرنیچر", ctaLink: "#shop"
+  },
+  {
+    image: "https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=1600&q=75",
+    badge: "Luxury Wardrobes & Custom Consoles",
+    badgeUr: "لگژری الماریاں اور کسٹم کنسولز",
+    title: "Custom Wooden Wardrobes & Storage",
+    titleUr: "جدید الماریاں اور سمارٹ اسٹوریج یونٹس",
+    sub: "Spacious sliding and hinged wardrobes manufactured with seasoned wood, anti-termite treatment and smooth German fittings.",
+    subUr: "دیمک سے پاک، شاندار ہارڈویئر اور دیرپا شیشم فنش کے ساتھ تیار کردہ الماریاں۔",
+    cta: "View Wardrobes", ctaUr: "الماریاں دیکھیں", ctaLink: "#shop"
+  }
+];
+
+let heroSlideIndex = 0;
+let heroTimer = null;
+
+function renderHeroSlider(){
+  const dotsEl = $("#heroDots");
+  if (dotsEl) {
+    dotsEl.innerHTML = HERO_SLIDES.map((_, i) => `
+      <button class="hero-dot ${i === heroSlideIndex ? 'active' : ''}" data-hdot="${i}" aria-label="Slide ${i+1}"></button>
+    `).join("");
+  }
+  updateHeroSlideContent(heroSlideIndex);
+  startHeroTimer();
+}
+
+function updateHeroSlideContent(idx){
+  const s = HERO_SLIDES[idx];
+  if (!s) return;
+  const isUr = state.lang === "ur";
+  
+  const titleEl = $("#heroTitle");
+  const subEl = $("#heroSub");
+  const badgeEl = $("#heroBadge");
+  const ctaTextEl = $("#heroCtaText");
+  const ctaEl = $("#heroCta");
+
+  if (titleEl) {
+    titleEl.style.opacity = "0.2";
+    setTimeout(() => {
+      titleEl.textContent = isUr ? s.titleUr : s.title;
+      titleEl.style.opacity = "1";
+    }, 140);
+  }
+  if (subEl) {
+    subEl.style.opacity = "0.2";
+    setTimeout(() => {
+      subEl.textContent = isUr ? s.subUr : s.sub;
+      subEl.style.opacity = "1";
+    }, 140);
+  }
+  if (badgeEl) badgeEl.textContent = isUr ? s.badgeUr : s.badge;
+  if (ctaTextEl) ctaTextEl.textContent = isUr ? s.ctaUr : s.cta;
+  if (ctaEl && s.ctaLink) ctaEl.href = s.ctaLink;
+
+  // Toggle slide active classes
+  $$("#heroSlider .hero-slide").forEach((el, i) => {
+    el.classList.toggle("active", i === idx);
+  });
+  // Toggle dot active classes
+  $$("#heroDots .hero-dot").forEach((el, i) => {
+    el.classList.toggle("active", i === idx);
+  });
+}
+
+function goToHeroSlide(idx){
+  heroSlideIndex = (idx + HERO_SLIDES.length) % HERO_SLIDES.length;
+  updateHeroSlideContent(heroSlideIndex);
+  startHeroTimer();
+}
+
+function nextHeroSlide(){ goToHeroSlide(heroSlideIndex + 1); }
+function prevHeroSlide(){ goToHeroSlide(heroSlideIndex - 1); }
+
+function startHeroTimer(){
+  clearInterval(heroTimer);
+  heroTimer = setInterval(nextHeroSlide, 5000);
+}
+function stopHeroTimer(){
+  clearInterval(heroTimer);
+}
+
 /* ---------- HERO ---------- */
 function renderHero(){
   const s = db.settings;
   const isUr = state.lang === "ur";
-  if ($("#heroTitle")) $("#heroTitle").textContent = isUr && s.heroTitleUr ? s.heroTitleUr : s.heroTitle;
-  if ($("#heroSub")) $("#heroSub").textContent = isUr && s.heroSubUr ? s.heroSubUr : s.heroSub;
-  if ($("#heroImg")) $("#heroImg").src = s.heroImage || DEFAULTS.settings.heroImage;
-  const wa = `https://wa.me/${s.whatsapp}?text=${encodeURIComponent("Assalam o Alaikum! I want to know more about Ali Furniture & Decor Point.")}`;
+  const wa = `https://wa.me/${s.whatsapp}?text=${encodeURIComponent("Assalam o Alaikum! I want to know more about Ali Furniture & Deco Point.")}`;
   if ($("#heroWa")) $("#heroWa").href = wa;
   if ($("#waFloat")) $("#waFloat").href = wa;
   if ($("#contactWa")) $("#contactWa").href = wa;
@@ -1527,6 +1792,7 @@ function renderHero(){
   if ($("#addrText")) $("#addrText").textContent = s.address;
   if ($("#mapFrame")) $("#mapFrame").src = s.mapEmbed;
   if ($("#videoLink")) $("#videoLink").href = s.videoUrl || "#";
+  renderHeroSlider();
 }
 
 /* ---------- FOOTER INFO ---------- */
@@ -1549,10 +1815,98 @@ function renderFooterInfo(){
   }
 
   const url = location.origin + location.pathname;
-  const qrSrc = "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=" + encodeURIComponent(url);
+  const qrSrc = "https://api.qrserver.com/v1/create-qr-code/?size=300x300&margin=4&data=" + encodeURIComponent(url);
   if ($("#qrImg")) $("#qrImg").src = qrSrc;
   if ($("#adminQr")) $("#adminQr").src = qrSrc;
   if ($("#qrUrlText")) $("#qrUrlText").textContent = url;
+}
+
+/* ---------- QR CODE & STANDEE DOWNLOAD ---------- */
+async function downloadQrCode(){
+  const url = location.origin + location.pathname;
+  const qrUrl = "https://api.qrserver.com/v1/create-qr-code/?size=1000x1000&margin=8&data=" + encodeURIComponent(url);
+  toast("Downloading HD QR Code (1000x1000)...");
+  try {
+    const res = await fetch(qrUrl);
+    const blob = await res.blob();
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "ali-furniture-qr-code.png";
+    a.click();
+    URL.revokeObjectURL(a.href);
+    toast("QR Code downloaded successfully!");
+  } catch(err) {
+    window.open(qrUrl, "_blank");
+  }
+}
+
+function printStandee(){
+  const url = location.origin + location.pathname;
+  const s = db.settings;
+  const qrUrl = "https://api.qrserver.com/v1/create-qr-code/?size=500x500&margin=8&data=" + encodeURIComponent(url);
+
+  const printWin = window.open("", "_blank", "width=750,height=900");
+  if (!printWin) {
+    toast("Allow popups in browser to print standee");
+    return;
+  }
+
+  printWin.document.write(`<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ali Furniture &amp; Deco Point — Showroom Standee</title>
+  <style>
+    @page { size: A4 portrait; margin: 12mm; }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+    body { background: #f9f7f4; display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 20px; color: #1a1614; }
+    .standee { width: 100%; max-width: 520px; background: #fff; border: 3px double #b08d57; border-radius: 28px; padding: 42px 32px; text-align: center; box-shadow: 0 16px 40px rgba(176,141,87,.15); position: relative; }
+    .emblem { width: 64px; height: 64px; margin: 0 auto 16px; border-radius: 18px; background: linear-gradient(135deg, #b08d57, #e5c483); color: #1a1614; display: flex; align-items: center; justify-content: center; font-size: 26px; font-weight: 800; font-family: serif; box-shadow: 0 6px 18px rgba(176,141,87,.35); }
+    .brand-title { font-size: 30px; font-weight: 800; font-family: serif; letter-spacing: -0.5px; }
+    .brand-title span { color: #b08d57; }
+    .brand-sub { font-size: 11px; text-transform: uppercase; letter-spacing: 4px; color: #b08d57; font-weight: 700; margin-top: 2px; margin-bottom: 24px; }
+    .badge-pill { display: inline-block; background: rgba(176,141,87,.12); color: #8e6a32; border: 1px solid rgba(176,141,87,.3); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; padding: 6px 18px; border-radius: 999px; margin-bottom: 22px; }
+    .qr-frame { width: 250px; height: 250px; margin: 0 auto 22px; padding: 12px; border: 2px solid #b08d57; border-radius: 22px; background: #fff; box-shadow: 0 8px 24px rgba(176,141,87,.2); }
+    .qr-frame img { width: 100%; height: 100%; object-fit: contain; }
+    .instruction { font-size: 18px; font-weight: 700; color: #1a1614; margin-bottom: 6px; }
+    .desc { font-size: 13px; color: #666; line-height: 1.5; max-width: 400px; margin: 0 auto 26px; }
+    .store-info { border-top: 1px solid #ede8e1; padding-top: 20px; font-size: 12px; color: #444; line-height: 1.7; }
+    .store-info strong { color: #1a1614; }
+    .no-print { margin-top: 25px; }
+    .btn-print { background: #b08d57; color: #fff; border: none; padding: 12px 28px; border-radius: 12px; font-size: 14px; font-weight: 600; cursor: pointer; box-shadow: 0 4px 14px rgba(176,141,87,.4); }
+    @media print {
+      body { background: #fff; padding: 0; }
+      .standee { box-shadow: none; border-color: #b08d57; max-width: 100%; }
+      .no-print { display: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="standee">
+    <div class="emblem">AF</div>
+    <div class="brand-title">Ali <span>Furniture</span></div>
+    <div class="brand-sub">and deco point</div>
+    <div class="badge-pill">✨ Official Online Showroom ✨</div>
+    <div class="qr-frame">
+      <img src="${qrUrl}" alt="Store QR Code">
+    </div>
+    <div class="instruction">📱 Scan To Browse Full Catalog &amp; Rates</div>
+    <p class="desc">Open your phone camera to explore 250+ luxury Sheesham wood designs, latest bridal sets, and place orders directly on WhatsApp.</p>
+    <div class="store-info">
+      <div><strong>Proprietor:</strong> ${esc(s.owner || "Malik Irfan")}</div>
+      <div><strong>Call / WhatsApp:</strong> ${esc(s.phone)} ${s.phone2 ? ' / ' + esc(s.phone2) : ''}</div>
+      <div><strong>Showroom Address:</strong> ${esc(s.address)}</div>
+    </div>
+    <div class="no-print">
+      <button class="btn-print" onclick="window.print()">🖨️ Print This Standee</button>
+    </div>
+  </div>
+  <script>
+    setTimeout(function(){ window.print(); }, 800);
+  <\/script>
+</body>
+</html>`);
+  printWin.document.close();
 }
 
 /* ---------- GALLERY ---------- */
@@ -1623,22 +1977,43 @@ function productCard(p){
 
 /* ---------- CATALOG ---------- */
 function categories(){
-  const set = new Set(db.products.map(p => p.category));
-  return ["all", ...Array.from(set)];
+  if (!Array.isArray(db.categories) || !db.categories.length) {
+    db.categories = clone(DEFAULTS.categories);
+  }
+  const visible = db.categories.filter(c => !c.hidden);
+  return ["all", ...visible.map(c => c.name)];
 }
 function renderCatalog(){
   // category chips
   const cats = categories();
   $("#catFilters").innerHTML = cats.map(c => {
     const active = state.filter === c;
-    const label = c === "all" ? t("all") : c;
+    let label = c;
+    if (c === "all") {
+      label = t("all");
+    } else {
+      const match = (db.categories || []).find(x => x.name.toLowerCase() === c.toLowerCase());
+      if (match && state.lang === "ur" && match.nameUr) {
+        label = match.nameUr;
+      }
+    }
     return `<button data-cat="${esc(c)}" class="px-4 py-2 rounded-full text-xs font-semibold whitespace-nowrap transition shrink-0"
       style="${active?'background:var(--gold);color:#fff;border:1px solid var(--gold)':'background:var(--card);border:1px solid var(--border);color:var(--text)'}">${esc(label)}</button>`;
   }).join("");
 
   // products
   let list = db.products.slice();
-  if (state.filter !== "all") list = list.filter(p => p.category === state.filter);
+
+  // Exclude products whose category is hidden
+  const hiddenCats = new Set((db.categories || []).filter(c => c.hidden).map(c => c.name.toLowerCase()));
+  list = list.filter(p => !hiddenCats.has((p.category || "").toLowerCase()));
+
+  // If active filter is hidden, reset to all
+  if (state.filter !== "all" && hiddenCats.has(state.filter.toLowerCase())) {
+    state.filter = "all";
+  }
+
+  if (state.filter !== "all") list = list.filter(p => (p.category || "").toLowerCase() === state.filter.toLowerCase());
   if (state.search) {
     const q = state.search.toLowerCase();
     list = list.filter(p => (p.title+" "+(p.titleUr||"")+" "+p.category+" "+p.desc).toLowerCase().includes(q));
@@ -2006,6 +2381,7 @@ function submitReview(e){
     verified: false
   });
   saveDB();
+  cloudPush(true);
   $("#reviewForm").reset();
   state.rating = 5; paintStars(5);
   toast(t("review_thanks"));
@@ -2045,7 +2421,7 @@ function renderFAQ(){
 const POLICIES = {
   privacy: {
     title: "Privacy Policy",
-    body: `<p>Ali Furniture &amp; Decor Point respects your privacy. This website stores all data (cart, wishlist, reviews) locally in your own browser using localStorage. We do not send your personal information to any unauthorized third-party server.</p><p>When you click "Checkout on WhatsApp", your order details are sent to Malik Irfan via WhatsApp so we can process your order smoothly.</p>`
+    body: `<p>Ali Furniture &amp; Deco Point respects your privacy. This website stores all data (cart, wishlist, reviews) locally in your own browser using localStorage. We do not send your personal information to any unauthorized third-party server.</p><p>When you click "Checkout on WhatsApp", your order details are sent to Malik Irfan via WhatsApp so we can process your order smoothly.</p>`
   },
   terms: {
     title: "Terms & Conditions",
@@ -2053,7 +2429,7 @@ const POLICIES = {
   },
   returns: {
     title: "Easy Exchange Policy",
-    body: `<p>Ali Furniture &amp; Decor Point offers a customer-friendly <b>Easy Exchange Policy</b> across Pakistan.</p><p>If you wish to exchange an item for a different size, polish shade, fabric, or model, simply get in touch with Malik Irfan on WhatsApp (0313-7015255 / 0348-1298093).</p><p>The furniture piece must be unused, undamaged, and kept in its original condition. We arrange a smooth and hassle-free replacement for your complete satisfaction.</p>`
+    body: `<p>Ali Furniture &amp; Deco Point offers a customer-friendly <b>Easy Exchange Policy</b> across Pakistan.</p><p>If you wish to exchange an item for a different size, polish shade, fabric, or model, simply get in touch with Malik Irfan on WhatsApp (0313-7015255 / 0348-1298093).</p><p>The furniture piece must be unused, undamaged, and kept in its original condition. We arrange a smooth and hassle-free replacement for your complete satisfaction.</p>`
   },
   delivery: {
     title: "Delivery Policy",
@@ -2077,7 +2453,7 @@ function maybeShowPopup(){
   setTimeout(() => {
     if (!$("#installAppModal") || !$("#installAppModal").classList.contains("open")) {
       $("#popupTitle").textContent = s.title || "Special Offer";
-      $("#popupText").textContent = s.text || "Ali Furniture & Decor Point ki taraf se khas discount!";
+      $("#popupText").textContent = s.text || "Ali Furniture & Deco Point ki taraf se khas discount!";
       openModal("popupModal");
     }
   }, delay);
@@ -2169,6 +2545,176 @@ function observeReveal(){
   $$(".reveal:not(.in)").forEach(el => revealObs.observe(el));
 }
 
+/* ---------- ADMIN: CATEGORIES CRUD ---------- */
+function populateCategorySelect(){
+  const sel = $("#ap_cat");
+  if (!sel) return;
+  if (!Array.isArray(db.categories) || !db.categories.length) {
+    db.categories = clone(DEFAULTS.categories);
+  }
+  const cur = sel.value;
+  sel.innerHTML = db.categories.map(c => `
+    <option value="${esc(c.name)}">${esc(c.name)}${c.nameUr ? ' (' + esc(c.nameUr) + ')' : ''}${c.hidden ? ' [Hidden]' : ''}</option>
+  `).join("");
+  if (cur && Array.from(sel.options).some(o => o.value === cur)) {
+    sel.value = cur;
+  }
+}
+
+function renderAdminCategories(){
+  if (!Array.isArray(db.categories) || !db.categories.length) {
+    db.categories = clone(DEFAULTS.categories);
+  }
+  const countEl = $("#catCount");
+  if (countEl) countEl.textContent = db.categories.length;
+  const el = $("#adminCategoriesList");
+  if (!el) return;
+
+  el.innerHTML = db.categories.map(c => {
+    const prodCount = db.products.filter(p => (p.category || "").toLowerCase() === c.name.toLowerCase()).length;
+    const isHidden = !!c.hidden;
+    return `
+      <div class="p-3 sm:p-3.5 rounded-xl border flex flex-col sm:flex-row sm:items-center justify-between gap-3 ${isHidden ? 'opacity-75 bg-[var(--alt)]' : 'bg-[var(--card)]'}" style="border-color:var(--border)">
+        <div class="flex items-center gap-3 min-w-0">
+          <div class="w-10 h-10 rounded-xl grid place-items-center text-sm shrink-0 ${isHidden ? 'bg-zinc-200 dark:bg-zinc-800 text-zinc-500' : 'bg-amber-500/10 text-[var(--gold)]'}">
+            <i class="fa-solid fa-layer-group"></i>
+          </div>
+          <div class="min-w-0">
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="font-bold text-sm text-[var(--text)]">${esc(c.name)}</span>
+              ${c.nameUr ? `<span class="text-xs text-muted font-normal" dir="rtl">(${esc(c.nameUr)})</span>` : ''}
+              ${isHidden 
+                ? `<span class="badge-pill bg-rose-500/15 text-rose-600 border border-rose-500/30 text-[9px]"><i class="fa-solid fa-eye-slash me-1"></i>Hidden</span>` 
+                : `<span class="badge-pill bg-emerald-500/15 text-emerald-600 border border-emerald-500/30 text-[9px]"><i class="fa-solid fa-check me-1"></i>Active</span>`
+              }
+            </div>
+            <p class="text-[11px] muted mt-0.5">${prodCount} product${prodCount === 1 ? '' : 's'} linked</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-1.5 shrink-0 self-end sm:self-center">
+          <button onclick="toggleCategoryVisibility('${c.id}')" class="btn btn-outline h-8 px-2.5 text-xs ${isHidden ? 'text-emerald-600 hover:border-emerald-600' : 'text-amber-600 hover:border-amber-600'}" title="${isHidden ? 'Unhide category (Show in shop)' : 'Hide category from visitors'}">
+            <i class="fa-solid ${isHidden ? 'fa-eye' : 'fa-eye-slash'} me-1"></i>
+            <span>${isHidden ? 'Show' : 'Hide'}</span>
+          </button>
+          <button onclick="editCategory('${c.id}')" class="btn btn-outline h-8 px-2.5 text-xs" title="Edit Category Name">
+            <i class="fa-solid fa-pen me-1"></i><span>Edit</span>
+          </button>
+          <button onclick="deleteCategory('${c.id}')" class="btn btn-outline h-8 px-2.5 text-xs text-rose-500 hover:border-rose-500" title="Delete Category">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+        </div>
+      </div>`;
+  }).join("");
+}
+
+function resetCategoryForm(){
+  $("#ac_id").value = "";
+  $("#ac_name").value = "";
+  $("#ac_nameUr").value = "";
+  $("#ac_hidden").checked = false;
+  $("#catFormTitle").textContent = "Add New Category";
+  $("#catSubmitBtn").textContent = "Save Category";
+}
+
+function editCategory(id){
+  const cat = (db.categories || []).find(c => c.id === id);
+  if (!cat) return;
+  $("#ac_id").value = cat.id;
+  $("#ac_name").value = cat.name || "";
+  $("#ac_nameUr").value = cat.nameUr || "";
+  $("#ac_hidden").checked = !!cat.hidden;
+  $("#catFormTitle").textContent = "Edit Category: " + cat.name;
+  $("#catSubmitBtn").textContent = "Update Category";
+  $("#ac_name").focus();
+  const el = $("#tab-categories");
+  if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function toggleCategoryVisibility(id){
+  const cat = (db.categories || []).find(c => c.id === id);
+  if (!cat) return;
+  cat.hidden = !cat.hidden;
+  saveDB();
+  cloudPush(true);
+  renderAdminCategories();
+  populateCategorySelect();
+  renderCatalog();
+  toast(cat.hidden ? `Category "${cat.name}" is now hidden` : `Category "${cat.name}" is now visible`);
+}
+
+function saveCategoryForm(){
+  const id = $("#ac_id").value;
+  const name = $("#ac_name").value.trim();
+  const nameUr = $("#ac_nameUr").value.trim();
+  const hidden = $("#ac_hidden").checked;
+  if (!name) { toast("Category name is required"); return; }
+
+  if (!Array.isArray(db.categories)) db.categories = clone(DEFAULTS.categories);
+
+  if (id) {
+    const cat = db.categories.find(c => c.id === id);
+    if (cat) {
+      const oldName = cat.name;
+      cat.name = name;
+      cat.nameUr = nameUr;
+      cat.hidden = hidden;
+      if (oldName && oldName !== name) {
+        db.products.forEach(p => {
+          if ((p.category || "").toLowerCase() === oldName.toLowerCase()) {
+            p.category = name;
+          }
+        });
+      }
+      toast("Category updated!");
+    }
+  } else {
+    if (db.categories.some(c => c.name.toLowerCase() === name.toLowerCase())) {
+      toast("A category with this name already exists");
+      return;
+    }
+    db.categories.push({
+      id: "cat_" + Date.now().toString(36) + Math.random().toString(36).slice(2, 6),
+      name,
+      nameUr,
+      hidden
+    });
+    toast("New category added!");
+  }
+
+  saveDB();
+  cloudPush(true);
+  resetCategoryForm();
+  renderAdminCategories();
+  populateCategorySelect();
+  renderCatalog();
+}
+
+function deleteCategory(id){
+  const cat = (db.categories || []).find(c => c.id === id);
+  if (!cat) return;
+  const count = db.products.filter(p => (p.category || "").toLowerCase() === cat.name.toLowerCase()).length;
+  const msg = count > 0 
+    ? `Category "${cat.name}" has ${count} product(s). Deleting it will reassign them to "Other". Continue?` 
+    : `Delete category "${cat.name}"?`;
+  if (!confirm(msg)) return;
+
+  if (count > 0) {
+    db.products.forEach(p => {
+      if ((p.category || "").toLowerCase() === cat.name.toLowerCase()) {
+        p.category = "Other";
+      }
+    });
+  }
+
+  db.categories = db.categories.filter(c => c.id !== id);
+  saveDB();
+  cloudPush(true);
+  renderAdminCategories();
+  populateCategorySelect();
+  renderCatalog();
+  toast("Category deleted");
+}
+
 /* ---------- ADMIN: LOGIN ---------- */
 function openAdmin(){
   $("#adminLogin").style.display = "grid";
@@ -2199,7 +2745,8 @@ function switchTab(name){
   $("#tab-" + name).classList.remove("hidden");
   $$(".tab-btn").forEach(b => b.classList.toggle("active", b.dataset.tab === name));
   if (name === "dash") renderAdminStats();
-  if (name === "products") renderAdminProducts();
+  if (name === "products") { populateCategorySelect(); renderAdminProducts(); }
+  if (name === "categories") renderAdminCategories();
   if (name === "reviews") renderAdminReviews();
   if (name === "orders") renderAdminOrders();
   if (name === "settings") fillSettings();
@@ -2209,7 +2756,9 @@ function switchTab(name){
 /* ---------- ADMIN: RENDER ---------- */
 function renderAdmin(){
   renderAdminStats();
+  populateCategorySelect();
   renderAdminProducts();
+  renderAdminCategories();
   renderAdminReviews();
   renderAdminOrders();
   fillSettings();
@@ -2268,18 +2817,21 @@ function renderAdminOrders(){
 
 /* ---------- ADMIN: PRODUCT CRUD ---------- */
 function resetProductForm(){
+  populateCategorySelect();
   ["ap_id","ap_title","ap_titleUr","ap_price","ap_old","ap_emi","ap_wood","ap_dims","ap_warranty","ap_delivery","ap_desc","ap_descUr","ap_images"].forEach(id => { const el=$("#"+id); if(el) el.value=""; });
-  $("#ap_cat").value = "Sofa"; $("#ap_stock").value = "in"; $("#ap_badge").value = "";
+  if ($("#ap_cat") && $("#ap_cat").options.length) $("#ap_cat").selectedIndex = 0;
+  $("#ap_stock").value = "in"; $("#ap_badge").value = "";
   $("#ap_file").value = "";
   $("#formTitle").textContent = "Add New Product";
 }
 function editProduct(id){
   const p = db.products.find(x=>x.id===id);
   if (!p) return;
+  populateCategorySelect();
   $("#ap_id").value = p.id;
   $("#ap_title").value = p.title || "";
   $("#ap_titleUr").value = p.titleUr || "";
-  $("#ap_cat").value = p.category || "Sofa";
+  if ($("#ap_cat")) $("#ap_cat").value = p.category || ($("#ap_cat").options[0] ? $("#ap_cat").options[0].value : "Sofa");
   $("#ap_price").value = p.price || "";
   $("#ap_old").value = p.oldPrice || "";
   $("#ap_emi").value = p.emi || "";
@@ -2328,17 +2880,20 @@ function saveProduct(){
     db.products.unshift(data);
   }
   saveDB();
+  cloudPush(true);
   resetProductForm();
   renderAdminProducts();
   renderCatalog();
   renderArrivals();
   renderAdminStats();
-  toast("Product saved");
+  toast("Product saved & synced to Cloud");
 }
 function deleteProduct(id){
   if (!confirm("Delete this product?")) return;
   db.products = db.products.filter(p => p.id !== id);
-  saveDB(); renderAdminProducts(); renderCatalog(); renderArrivals(); renderAdminStats();
+  saveDB();
+  cloudPush(true);
+  renderAdminProducts(); renderCatalog(); renderArrivals(); renderAdminStats();
 }
 function duplicateProduct(id){
   const p = db.products.find(x=>x.id===id);
@@ -2347,7 +2902,9 @@ function duplicateProduct(id){
   copy.id = uid();
   copy.title = p.title + " (Copy)";
   db.products.unshift(copy);
-  saveDB(); renderAdminProducts(); renderCatalog(); toast("Product duplicated");
+  saveDB();
+  cloudPush(true);
+  renderAdminProducts(); renderCatalog(); toast("Product duplicated & synced");
 }
 function bulkDiscount(){
   const pct = +$("#bulkPct").value;
@@ -2356,23 +2913,31 @@ function bulkDiscount(){
     if (!p.oldPrice || p.oldPrice <= p.price) p.oldPrice = p.price;
     p.price = Math.round(p.price * (1 - pct/100));
   });
-  saveDB(); renderAdminProducts(); renderCatalog(); renderArrivals(); toast("Discount applied to all");
+  saveDB();
+  cloudPush(true);
+  renderAdminProducts(); renderCatalog(); renderArrivals(); toast("Discount applied & synced");
 }
 function bulkInStock(){
   db.products.forEach(p => p.stock = "in");
-  saveDB(); renderAdminProducts(); renderCatalog(); toast("All products in stock");
+  saveDB();
+  cloudPush(true);
+  renderAdminProducts(); renderCatalog(); toast("All products in stock & synced");
 }
 function bulkSoldOut(){
   db.products.forEach(p => p.stock = "sold");
-  saveDB(); renderAdminProducts(); renderCatalog(); toast("All products marked sold out");
+  saveDB();
+  cloudPush(true);
+  renderAdminProducts(); renderCatalog(); toast("All products marked sold out & synced");
 }
 function approveReview(id){
   const r = db.reviews.find(x=>x.id===id);
-  if (r) { r.approved = true; r.verified = true; saveDB(); renderAdminReviews(); renderReviews(); renderAdminStats(); toast("Review approved"); }
+  if (r) { r.approved = true; r.verified = true; saveDB(); cloudPush(true); renderAdminReviews(); renderReviews(); renderAdminStats(); toast("Review approved & synced"); }
 }
 function deleteReview(id){
   db.reviews = db.reviews.filter(r => r.id !== id);
-  saveDB(); renderAdminReviews(); renderReviews(); renderAdminStats();
+  saveDB();
+  cloudPush(true);
+  renderAdminReviews(); renderReviews(); renderAdminStats();
 }
 
 /* ---------- ADMIN: IMAGE UPLOAD (compressed to WebP) ---------- */
@@ -2478,8 +3043,9 @@ function saveSettings(){
   s.cloudUrl = v("s_cloudUrl").trim();
 
   saveDB();
+  cloudPush(true);
   renderAll();
-  toast("Settings saved");
+  toast("Settings saved & synced to Cloud");
 }
 
 /* ---------- EXPORT / IMPORT ---------- */
@@ -2561,12 +3127,12 @@ function doPost(e) {
   }
 }`;
 
-async function cloudPush(){
-  const url = ($("#s_cloudUrl") ? $("#s_cloudUrl").value : db.settings.cloudUrl || "").trim();
-  if (!url) { toast("Set Cloud URL first (Backup & Cloud tab)"); return; }
+async function cloudPush(silent = false){
+  const url = ($("#s_cloudUrl") ? $("#s_cloudUrl").value : db.settings.cloudUrl || DEFAULTS.settings.cloudUrl || "").trim();
+  if (!url) { if (!silent) toast("Set Cloud URL first (Backup & Cloud tab)"); return; }
   db.settings.cloudUrl = url;
   saveDB();
-  setCloudStatus("Pushing...");
+  if (!silent) setCloudStatus("Pushing to Firebase...");
   try {
     const isFirebase = url.includes("firebaseio.com");
     if (isFirebase) {
@@ -2583,33 +3149,73 @@ async function cloudPush(){
         body: JSON.stringify({ action: "save", payload: db })
       });
     }
-    setCloudStatus("✅ Pushed successfully at " + new Date().toLocaleTimeString());
-    toast("Data pushed to cloud");
+    const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    setCloudStatus("🟢 Live Synced at " + time);
+    if (!silent) toast("Data pushed to cloud");
   } catch(err) {
     setCloudStatus("❌ Push failed: " + err.message);
-    toast("Cloud push failed");
+    if (!silent) toast("Cloud push failed");
   }
 }
+
 async function cloudPull(){
-  const url = ($("#s_cloudUrl") ? $("#s_cloudUrl").value : db.settings.cloudUrl || "").trim();
+  const url = ($("#s_cloudUrl") ? $("#s_cloudUrl").value : db.settings.cloudUrl || DEFAULTS.settings.cloudUrl || "").trim();
   if (!url) { toast("Set Cloud URL first"); return; }
-  setCloudStatus("Pulling...");
+  setCloudStatus("Pulling from Firebase...");
   try {
     const isFirebase = url.includes("firebaseio.com");
     const endpoint = isFirebase ? url.replace(/\/$/,"") + "/store.json" : url + "?action=load";
     const res = await fetch(endpoint);
     const data = await res.json();
     if (!data || !data.products) throw new Error("No data found in cloud");
-    if (!confirm("Replace local data with cloud data?")) return;
+    if (!confirm("Replace local data with live cloud data from Firebase?")) return;
     db = data;
     db.settings = Object.assign(clone(DEFAULTS.settings), db.settings || {});
+    if (!db.settings.cloudUrl) db.settings.cloudUrl = url;
     saveDB(); renderAll(); renderAdmin();
-    setCloudStatus("✅ Pulled successfully at " + new Date().toLocaleTimeString());
+    const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    setCloudStatus("🟢 Live Pulled at " + time);
     toast("Data pulled from cloud");
   } catch(err) {
     setCloudStatus("❌ Pull failed: " + err.message);
+    toast("Pull failed");
   }
 }
+
+async function syncFromCloud(){
+  const url = (db.settings.cloudUrl || DEFAULTS.settings.cloudUrl || "").trim();
+  if (!url) return;
+  try {
+    const isFirebase = url.includes("firebaseio.com");
+    const endpoint = isFirebase ? url.replace(/\/$/,"") + "/store.json" : url + "?action=load";
+    const res = await fetch(endpoint);
+    if (!res.ok) return;
+    const data = await res.json();
+    
+    // If cloud is empty, seed it with current database
+    if (!data || !data.products || !data.products.length) {
+      await cloudPush(true);
+      return;
+    }
+
+    // Merge cloud data seamlessly
+    db = data;
+    if (!db.settings) db.settings = clone(DEFAULTS.settings);
+    if (!db.settings.cloudUrl) db.settings.cloudUrl = url;
+    if (!Array.isArray(db.products)) db.products = clone(DEFAULTS.products);
+    if (!Array.isArray(db.categories) || !db.categories.length) db.categories = clone(DEFAULTS.categories);
+    if (!Array.isArray(db.reviews)) db.reviews = [];
+    if (!Array.isArray(db.orders)) db.orders = [];
+    
+    saveDB();
+    renderAll();
+    const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    setCloudStatus("🟢 Live Connected to Firebase (" + time + ")");
+  } catch(err) {
+    setCloudStatus("🟡 Offline / Local Cache Active");
+  }
+}
+
 function setCloudStatus(msg){
   const el = $("#cloudStatus");
   if (el) el.textContent = msg;
@@ -2712,13 +3318,41 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   paintStars(5);
 
+  // Hero Carousel bindings
+  $("#heroPrev") && $("#heroPrev").addEventListener("click", prevHeroSlide);
+  $("#heroNext") && $("#heroNext").addEventListener("click", nextHeroSlide);
+  $("#heroDots") && $("#heroDots").addEventListener("click", e => {
+    const dot = e.target.closest("[data-hdot]");
+    if (dot) goToHeroSlide(+dot.dataset.hdot);
+  });
+  const heroEl = $("#home");
+  if (heroEl) {
+    heroEl.addEventListener("mouseenter", stopHeroTimer);
+    heroEl.addEventListener("mouseleave", startHeroTimer);
+
+    // Touch swipe for mobile
+    let touchStartX = 0;
+    heroEl.addEventListener("touchstart", e => {
+      if (e.touches && e.touches[0]) touchStartX = e.touches[0].clientX;
+      stopHeroTimer();
+    }, { passive: true });
+    heroEl.addEventListener("touchend", e => {
+      if (e.changedTouches && e.changedTouches[0]) {
+        const diff = e.changedTouches[0].clientX - touchStartX;
+        if (diff > 45) prevHeroSlide();
+        else if (diff < -45) nextHeroSlide();
+      }
+      startHeroTimer();
+    }, { passive: true });
+  }
+
   // Contact form -> WhatsApp
   $("#contactForm").addEventListener("submit", e => {
     e.preventDefault();
     const name = $("#cf_name").value.trim();
     const phone = $("#cf_phone").value.trim();
     const msg = $("#cf_msg").value.trim();
-    const text = `Assalam o Alaikum Ali Furniture & Decor Point!\n\nName: ${name}\nPhone: ${phone}\n\n${msg}`;
+    const text = `Assalam o Alaikum Ali Furniture & Deco Point!\n\nName: ${name}\nPhone: ${phone}\n\n${msg}`;
     trackWa();
     window.open(`https://wa.me/${db.settings.whatsapp}?text=${encodeURIComponent(text)}`, "_blank");
     e.target.reset();
@@ -2776,6 +3410,7 @@ document.addEventListener("DOMContentLoaded", () => {
   checkFirstVisitInstallPrompt();
   maybeShowPopup();
   animateCounters();
+  syncFromCloud(); // Auto-sync live products & prices from Firebase
 
   // Re-check counters after layout
   setTimeout(animateCounters, 800);
@@ -2814,6 +3449,8 @@ window.cloudPull = cloudPull;
 window.resetAll = resetAll;
 window.imgFail = imgFail;
 window.trackWa = trackWa;
+window.downloadQrCode = downloadQrCode;
+window.printStandee = printStandee;
 </script>
 </body>
 </html>
