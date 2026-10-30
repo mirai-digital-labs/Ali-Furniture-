@@ -3,7 +3,7 @@
    Cache-first for static assets, network-first for CDN
    ========================================================= */
 
-const VERSION = "v2.0.8";
+const VERSION = "v2.0.9";
 const CACHE_NAME = "ali-furniture-" + VERSION;
 
 // Core app shell — cached on install

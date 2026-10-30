@@ -54,9 +54,8 @@ html.dark{
   --border:#2a2521;
 }
 *{-webkit-tap-highlight-color:transparent;box-sizing:border-box}
-html,body{max-width:100%;overflow-x:hidden;position:relative}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;transition:background .3s,color .3s}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;overflow-x:clip;transition:background .3s,color .3s}
 html[dir="rtl"] body{font-family:'Noto Naskh Arabic','Inter',sans-serif}
 html[dir="rtl"] .font-display{font-family:'Noto Naskh Arabic','Playfair Display',serif}
 .font-display{font-family:'Playfair Display',serif}
@@ -118,7 +117,14 @@ details.faq[open] .faq-icon{transform:rotate(45deg)}
 .fade-page{animation:fadeIn .5s ease}
 
 /* Modern Sticky Navbar Scroll Style */
-#navbar{transition:all .35s cubic-bezier(.16,1,.3,1)}
+#navbar{
+  position:-webkit-sticky!important;
+  position:sticky!important;
+  top:0!important;
+  z-index:50!important;
+  width:100%;
+  transition:all .35s cubic-bezier(.16,1,.3,1);
+}
 #navbar.scrolled{
   background:rgba(255,255,255,.94)!important;
   backdrop-filter:blur(20px) saturate(180%);
